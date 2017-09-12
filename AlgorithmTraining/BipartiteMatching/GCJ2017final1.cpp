@@ -1,5 +1,3 @@
-// AlgorithmTraining.cpp : main project file.
-
 #include "stdafx.h"
 #include <vector>  
 #include <errno.h>
@@ -13,14 +11,14 @@ const int NotVisited = -1;
 
 int NumberOfDices;
 int DiceSides[Max][7];
-vector<int> DiceSideBipartiteGrapgh[Max];
+vector<int> DicesWithSideNumber[Max];
 
 long long iteration, visitedSideNumbers[Max];
-int leftFlow[Max], rightFlow[Max];
+int sideNumbers[Max], dices[Max];
 
-void AddFlow(int sideNumber, int diceNumber);
-void RemoveFlow(int sideNumber);
-bool depthFirstSearch(int sideNumber, int iteration);
+void AddDiceToStraight(int sideNumber, int diceNumber);
+void RemoveDiceFromStraight(int sideNumber);
+bool findDiceWithSideNumber(int sideNumber, int iteration);
 void cleanFlowGraph();
 void readDicesFromFileAndBuildGraph();
 int findMaxStraight();
@@ -49,7 +47,7 @@ void readDicesFromFileAndBuildGraph()
            int sideNumber;
            fscanf(file, "%d", &sideNumber);  
 		   DiceSides[diceNumber][side] = sideNumber;
-		   DiceSideBipartiteGrapgh[sideNumber].push_back(diceNumber);
+		   DicesWithSideNumber[sideNumber].push_back(diceNumber);
 	   }
 	}
 }
@@ -58,13 +56,13 @@ void cleanFlowGraph()
 {
 	for (int i = 1; i < Max; i++) 
 	{
-       leftFlow[i] = NoFlow;
+       sideNumbers[i] = NoFlow;
        visitedSideNumbers[i] = NotVisited;
     }
 
     for (int j = 1; j <= NumberOfDices; j++) 
 	{
-       rightFlow[j] = NoFlow;
+       dices[j] = NoFlow;
     }
 }
 
@@ -83,7 +81,7 @@ int findMaxStraight()
 			{
                 iteration = iteration;
 			}
-			if (depthFirstSearch(straightRight + 1, iteration))
+			if (findDiceWithSideNumber(straightRight + 1, iteration))
 			{
                 straightRight++;
 			}
@@ -95,38 +93,37 @@ int findMaxStraight()
 
         maxStraight = max(maxStraight, straightRight - straightLeft + 1);
 
-		if (leftFlow[straightLeft] != NoFlow)
+		if (sideNumbers[straightLeft] != NoFlow)
 		{
-            RemoveFlow(straightLeft);
+            RemoveDiceFromStraight(straightLeft);
 		}
 	}
 	return maxStraight;
 }
 
-bool depthFirstSearch(int sideNumber, int iteration) 
+bool findDiceWithSideNumber(int sideNumber, int iteration) 
 {
     visitedSideNumbers[sideNumber] = iteration;
 
-	for (int i = 0; i < DiceSideBipartiteGrapgh[sideNumber].size(); i++)
+	for (int i = 0; i < DicesWithSideNumber[sideNumber].size(); i++)
 	{
-        int diceNumber = DiceSideBipartiteGrapgh[sideNumber][i];
-
-		if (rightFlow[diceNumber] == NoFlow) 
+        int diceNumber = DicesWithSideNumber[sideNumber][i];
+		if (dices[diceNumber] == NoFlow) 
 	    {
-            AddFlow(sideNumber, diceNumber);
+            AddDiceToStraight(sideNumber, diceNumber);
 		    return true;
 	    }
 	}
 
-	for (int i = 0; i < DiceSideBipartiteGrapgh[sideNumber].size(); i++)
+	for (int i = 0; i < DicesWithSideNumber[sideNumber].size(); i++)
 	{
-        int diceNumber = DiceSideBipartiteGrapgh[sideNumber][i];
-        bool wasNotVisited = visitedSideNumbers[rightFlow[diceNumber]] != iteration;
+        int diceNumber = DicesWithSideNumber[sideNumber][i];
+        bool wasNotVisited = visitedSideNumbers[dices[diceNumber]] != iteration;
 	    if (wasNotVisited) 
 	    {
-		    if (depthFirstSearch(rightFlow[diceNumber], iteration)) 
+		    if (findDiceWithSideNumber(dices[diceNumber], iteration)) 
 		    {
-                AddFlow(sideNumber, diceNumber);
+                AddDiceToStraight(sideNumber, diceNumber);
                 return true;
 		    }
 	    }
@@ -135,14 +132,14 @@ bool depthFirstSearch(int sideNumber, int iteration)
     return false;
 }
 
-void AddFlow(int sideNumber, int diceNumber) 
+void AddDiceToStraight(int side, int dice) 
 {
-    leftFlow[sideNumber] = diceNumber;
-    rightFlow[diceNumber] = sideNumber;
+    sideNumbers[side] = dice;
+    dices[dice] = side;
 }
 
-void RemoveFlow(int sideNumber)
+void RemoveDiceFromStraight(int side)
 {
-    rightFlow[leftFlow[sideNumber]] = NoFlow;
-    leftFlow[sideNumber] = NoFlow;
+    dices[sideNumbers[side]] = NoFlow;
+    sideNumbers[side] = NoFlow;
 }

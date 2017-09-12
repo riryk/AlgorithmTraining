@@ -242,11 +242,11 @@
 			Name="BipartiteMatching"
 			>
 			<File
-				RelativePath=".\GCJ2017final1.cpp"
+				RelativePath=".\BipartiteMatching\GCJ2017final1.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\GCJ2017final1.txt"
+				RelativePath=".\BipartiteMatching\GCJ2017final1.txt"
 				>
 			</File>
 		</Filter>
