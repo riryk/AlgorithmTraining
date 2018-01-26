@@ -26,3 +26,7 @@ AppWizard uses "TODO:" to indicate parts of the source code you
 should add to or customize.
 
 /////////////////////////////////////////////////////////////////////////////
+
+HashSet.c, Vector.c https://github.com/miguelmc/Vector-Hashset-C-Implementation/blob/master/files/vector.c
+
+

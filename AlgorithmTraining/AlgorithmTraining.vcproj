@@ -250,6 +250,34 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="ConvexHull"
+			>
+			<File
+				RelativePath=".\ConvexHull\GCJ2017final4.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\ConvexHull\GCJ2017final4.txt"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="DataStructures"
+			>
+			<Filter
+				Name="HashSet"
+				>
+				<File
+					RelativePath=".\DataStructures\HashSet\hashset_no_bucket.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\HashSet\hashset_no_bucket.h"
+					>
+				</File>
+			</Filter>
+		</Filter>
 		<File
 			RelativePath=".\ReadMe.txt"
 			>
