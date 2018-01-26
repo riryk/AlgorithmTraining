@@ -6,12 +6,12 @@
 static const unsigned int primeFirst = 73;
 static const unsigned int primeSecond = 5009;
 
-int hashset_add_member(HashSet set, void *item);
-void rehash_if_too_large(HashSet set);
+int hashset_add_member(HashSetNoBuckets set, void *item);
+void rehash_if_too_large(HashSetNoBuckets set);
 
-HashSet hashset_create()
+HashSetNoBuckets hashset_create()
 {
-    HashSet set = (HashSet)calloc(1, sizeof(struct HashSetData));
+    HashSetNoBuckets set = (HashSetNoBuckets)calloc(1, sizeof(struct HashSetNoBucketsData));
     if (set == NULL) {
         return NULL;
     }
@@ -30,7 +30,7 @@ HashSet hashset_create()
     return set;
 }
 
-void hashset_destroy(HashSet set)
+void hashset_destroy(HashSetNoBuckets set)
 {
     if (set) {
         free(set->items);
@@ -39,14 +39,14 @@ void hashset_destroy(HashSet set)
     free(set);
 }
 
-int hashset_add(HashSet set, void *item)
+int hashset_add(HashSetNoBuckets set, void *item)
 {
     int addResult = hashset_add_member(set, item);
     rehash_if_too_large(set);
     return addResult;
 }
 
-int hashset_remove(HashSet set, void *item)
+int hashset_remove(HashSetNoBuckets set, void *item)
 {
     size_t value = (size_t)item;
     size_t i = set->mask & (primeFirst * value);
@@ -65,7 +65,7 @@ int hashset_remove(HashSet set, void *item)
     return 0;
 }
 
-int hashset_is_member(HashSet set, void *item)
+int hashset_is_member(HashSetNoBuckets set, void *item)
 {
     size_t value = (size_t)item;
     size_t i = set->mask & (primeFirst * value);
@@ -81,7 +81,7 @@ int hashset_is_member(HashSet set, void *item)
     return 0;
 }
 
-int hashset_add_member(HashSet set, void *item)
+int hashset_add_member(HashSetNoBuckets set, void *item)
 {
     size_t value = (size_t)item;
     size_t i;
@@ -109,7 +109,7 @@ int hashset_add_member(HashSet set, void *item)
     return 1;
 }
 
-void rehash_if_too_large(HashSet set)
+void rehash_if_too_large(HashSetNoBuckets set)
 {
     size_t *oldItems;
     size_t oldCapacity, i;

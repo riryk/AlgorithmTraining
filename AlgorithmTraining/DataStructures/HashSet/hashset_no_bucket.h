@@ -1,7 +1,7 @@
-#ifndef HashSet_h
-#define HashSet_h 1
+#ifndef HashSetNoBucket_h
+#define HashSetNoBucket_h 1
 
-struct HashSetData {
+struct HashSetNoBucketsData {
    size_t bitsNumber;
    size_t mask;
 
@@ -11,16 +11,16 @@ struct HashSetData {
    size_t itemsDeletedNumber;
 };
 
-typedef struct HashSetData *HashSet;
+typedef struct HashSetNoBucketsData *HashSetNoBuckets;
 
-HashSet hashset_create(void);
+HashSetNoBuckets hashset_create(void);
 
-void hashset_destroy(HashSet set);
+void hashset_destroy(HashSetNoBuckets set);
 
-int hashset_add(HashSet set, void *item);
+int hashset_add(HashSetNoBuckets set, void *item);
 
-int hashset_remove(HashSet set, void *item);
+int hashset_remove(HashSetNoBuckets set, void *item);
 
-int hashset_is_member(HashSet set, void *item);
+int hashset_is_member(HashSetNoBuckets set, void *item);
 
 #endif

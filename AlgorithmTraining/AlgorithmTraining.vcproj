@@ -269,6 +269,14 @@
 				Name="HashSet"
 				>
 				<File
+					RelativePath=".\DataStructures\HashSet\hashset.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\HashSet\hashset.h"
+					>
+				</File>
+				<File
 					RelativePath=".\DataStructures\HashSet\hashset_no_bucket.cpp"
 					>
 				</File>
