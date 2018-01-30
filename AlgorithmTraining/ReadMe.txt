@@ -29,4 +29,13 @@ should add to or customize.
 
 HashSet.c, Vector.c https://github.com/miguelmc/Vector-Hashset-C-Implementation/blob/master/files/vector.c
 
+Hashtable in c: https://github.com/ryantenney/chashtable
+
 unordered set https://www.youtube.com/watch?v=XKu_SEDAykw
+
+Google code jam https://www.quora.com/Where-can-one-find-the-problem-statements-from-Google-Code-Jam-before-2008
+
+Books https://asoldatenko.com/good-to-great-sport-programming-contests-reads.html
+
+Custom malloc: http://simplestcodings.blogspot.com/2010/08/custom-malloc-function-implementation.html
+

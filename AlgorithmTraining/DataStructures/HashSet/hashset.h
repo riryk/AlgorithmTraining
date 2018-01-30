@@ -14,12 +14,12 @@ typedef struct {
   int numberOfBuckets;
   int numberOfElements;
   void *buckets;
-  HashSetHashFunction hashFunction;
-  HashSetCompareFunction compareFunction;
-  HashSetFreeFunction freeFunction;
+  HashSetHashFunction hashFunc;
+  HashSetCompareFunction compareFunc;
+  HashSetFreeFunction freeFunc;
 } hashset;
 
-void hashSetCreateNew(hashset *hashset, int elementSize, int numberOfBuckets, 
+void hashSetCreateNew(hashset *set, int elementSize, int numberOfBuckets, 
 		HashSetHashFunction hashFunc, HashSetCompareFunction compareFunc, HashSetFreeFunction freeFunc);
 
 void hashSetDispose(hashset *hashset);
