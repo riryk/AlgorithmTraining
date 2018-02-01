@@ -61,6 +61,25 @@ void VectorInsert(vector *v, const void *elementAddress, int position)
 	free(buffer);
 }
 
+void VectorAppend(vector *v, const void *elementAddress)
+{
+	if (v->length == v->totalLength)
+		expandVector(v);	
+
+	char* elementPosition = (char*)v->elements + v->length * v->elementSize;
+	memcpy(elementPosition, elementAddress, v->elementSize);
+	v->length++;
+}
+
+int VectorSearch(const vector *v, const void *key, VectorCompareFunction searchFunc, int startIndex)
+{ 
+	char* locatedItem;
+	size_t numberOfElements = v->length - startIndex; 
+	
+	locatedItem = (char*)bsearch(key, (char*)v->elements + startIndex * v->elementSize, numberOfElements, v->elementSize, searchFunc);
+	return (locatedItem == NULL) ? -1 : locatedItem - (char*)v->elements;
+} 
+
 void expandVector(vector *v)
 {
 	if (v->totalLength == 0)

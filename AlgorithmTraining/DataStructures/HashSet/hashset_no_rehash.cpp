@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include <cstdlib>
-#include "hashset.h"
+#include "hashset_no_rehash.h"
 #include "../Vector/vector.h"
 
 void hashSetCreateNew(hashset *set, int elementSize, int numberOfBuckets, 
@@ -57,4 +57,19 @@ void hashSetEnter(hashset *set, const void *elementAddress)
 			return;
 		}
 	}
+
+	VectorAppend(*(vector**)bucket, elementAddress);
+	set->numberOfElements++;
+}
+
+void *hashSetLookup(const hashset *set, const void *elementAddress)
+{
+	int hashCode = set->hashFunc(elementAddress, set->numberOfBuckets);
+
+	void* bucket = (char*)set->buckets + hashCode * sizeof(vector*);
+	int foundIndex = VectorSearch(*(vector**)bucket, elementAddress, set->compareFunc, 0);
+	if (foundIndex == -1) 
+		return NULL;
+
+	return VectorNth(*(vector**)bucket, foundIndex);
 }

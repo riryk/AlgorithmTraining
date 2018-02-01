@@ -27,4 +27,8 @@ void VectorReplace(vector *v, const void *elementAddress, int position);
 
 void VectorInsert(vector *v, const void *elementAddress, int position);
 
+void VectorAppend(vector *v, const void *elementAddress);
+
+int VectorSearch(const vector *v, const void *key, VectorCompareFunction searchFunc, int startIndex);
+
 #endif

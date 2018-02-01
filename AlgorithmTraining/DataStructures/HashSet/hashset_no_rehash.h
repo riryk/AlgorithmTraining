@@ -1,5 +1,5 @@
-#ifndef HashSet_h
-#define HashSet_h 1
+#ifndef HashSet_NoRehash_h
+#define HashSet_NoRehash_h 1
 
 typedef int (*HashSetHashFunction)(const void *elementAddress, int numberOFBuckets);
 
@@ -31,5 +31,7 @@ void hashSetEnter(hashset *hashset, const void *elementAddress);
 void *hashSetLookup(const hashset *hashset, const void *elementAddress);
 
 void hashSetMap(hashset *hashset, HashSetMapFunction mapFunc, void *auxiliaryData);
+
+void *hashSetLookup(const hashset *set, const void *elementAddress);
 
 #endif

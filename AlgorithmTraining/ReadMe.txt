@@ -39,3 +39,6 @@ Books https://asoldatenko.com/good-to-great-sport-programming-contests-reads.htm
 
 Custom malloc: http://simplestcodings.blogspot.com/2010/08/custom-malloc-function-implementation.html
 
+https://polycode.livejournal.com/29426.html Microsoft question.
+
+
