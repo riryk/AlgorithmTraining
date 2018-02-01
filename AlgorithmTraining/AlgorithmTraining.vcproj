@@ -297,6 +297,18 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="HashTable"
+				>
+				<File
+					RelativePath=".\DataStructures\HashTable\hashtable.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\HashTable\hashtable.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<File
 			RelativePath=".\ReadMe.txt"
