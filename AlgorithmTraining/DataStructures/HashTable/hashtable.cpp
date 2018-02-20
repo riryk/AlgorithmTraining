@@ -68,13 +68,27 @@ unsigned int hash(struct hashtable *h, void *key)
 int hashtable_insert(struct hashtable *h, void *key, void *value)
 {
     unsigned int index;
-    struct hashtable_entry *entry;
+    struct hashtable_entry *new_entry;
 
 	if (++(h->entrycount) > h->loadlimit) {
         hashtable_expand(h);
 	}   
+    
+	new_entry = (struct hashtable_entry *)malloc(sizeof(struct hashtable_entry));
+    if (new_entry == NULL) { 
+		--(h->entrycount); 
+		return 0; 
+	} 
+    
+	new_entry->hash = hash(h, key);
+	index = new_entry->hash % h->tablelength;
 
-	return 0;
+	new_entry->key = key;
+	new_entry->value = value;
+	new_entry->next = h->table[index];
+    h->table[index] = new_entry; 
+
+	return -1;
 }
 
 static int hashtable_expand(struct hashtable *h)
@@ -95,6 +109,7 @@ static int hashtable_expand(struct hashtable *h)
 		for (i = 0; i < h->tablelength; i++) {
             while ((entry = h->table[i]) != NULL) {
                 h->table[i] = entry->next;
+
 				index = entry->hash % newsize;
                 entry->next = newtable[index];
                 newtable[index] = entry;
@@ -130,4 +145,48 @@ static int hashtable_expand(struct hashtable *h)
     return -1;
 }
 
+void *hashtable_search(struct hashtable *h, void *key)
+{
+    struct hashtable_entry *entry;
+    unsigned int hashvalue, index;
 
+    hashvalue = hash(h, key);
+    index = hashvalue % h->tablelength;
+
+    entry = h->table[index];
+    while (entry != NULL) {
+		if (hashvalue == entry->hash && h->equalfn(key, entry->key)) 
+			return entry->value;
+		entry = entry->next;
+    }
+    return NULL;
+}
+
+void *hashtable_remove(struct hashtable *h, void *key)
+{
+    struct hashtable_entry *entry;
+    struct hashtable_entry **pentry;
+    void *value;
+    unsigned int hashvalue, index;
+
+    hashvalue = hash(h, key);
+	index = hashvalue % h->tablelength;
+
+    pentry = &(h->table[index]);
+    entry = h->table[index];
+    while (entry != NULL)
+    {
+		if ((hashvalue == entry->hash) && (h->equalfn(key, entry->key)))
+        {
+			*pentry = entry->next;
+            h->entrycount--;
+			value = entry->value;
+			free(entry->key);
+            free(entry);
+            return value;
+        }
+        pentry = &(entry->next);
+        entry = entry->next;
+    }
+    return NULL;
+}

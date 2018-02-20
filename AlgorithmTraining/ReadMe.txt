@@ -41,4 +41,6 @@ Custom malloc: http://simplestcodings.blogspot.com/2010/08/custom-malloc-functio
 
 https://polycode.livejournal.com/29426.html Microsoft question.
 
+HashMap implementation: https://medium.com/@aozturk/simple-hash-map-hash-table-implementation-in-c-931965904250
+
 

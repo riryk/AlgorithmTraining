@@ -20,4 +20,6 @@ struct hashtable {
 
 static int hashtable_expand(struct hashtable *h);
 
+void *hashtable_search(struct hashtable *h, void *key);
+
 #endif
