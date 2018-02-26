@@ -18,7 +18,14 @@ struct hashtable {
     int (*equalfn) (void *key1, void *key2);
 };
 
+struct hashtable* create_hashtable(
+	unsigned int minsize,
+    unsigned int (*hashfn) (void*),
+    int (*equalfn) (void*,void*));
+
 static int hashtable_expand(struct hashtable *h);
+
+int hashtable_insert(struct hashtable *h, void *key, void *value);
 
 void *hashtable_search(struct hashtable *h, void *key);
 

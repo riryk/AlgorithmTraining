@@ -308,6 +308,14 @@
 					RelativePath=".\DataStructures\HashTable\hashtable.h"
 					>
 				</File>
+				<File
+					RelativePath=".\DataStructures\HashTable\hashtable_test.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\HashTable\hashtable_test.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<File

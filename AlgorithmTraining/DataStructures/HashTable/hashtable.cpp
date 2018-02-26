@@ -190,3 +190,44 @@ void *hashtable_remove(struct hashtable *h, void *key)
     }
     return NULL;
 }
+
+void hashtable_destroy(struct hashtable *h, bool free_values)
+{
+    unsigned int i;
+    struct hashtable_entry *e, *f;
+    struct hashtable_entry **table = h->table;
+
+    if (free_values)
+    {
+        for (i = 0; i < h->tablelength; i++)
+        {
+            e = table[i];
+            while (e != NULL)
+            { 
+				f = e; 
+				e = e->next; 
+				free(f->key); 
+				free(f->value); 
+				free(f); 
+			}
+        }
+    }
+    else
+    {
+        for (i = 0; i < h->tablelength; i++)
+        {
+            e = table[i];
+            while (e != NULL)
+            { 
+				f = e; 
+				e = e->next; 
+				free(f->key); 
+				free(f); 
+			}
+        }
+    }
+
+    free(h->table);
+    free(h);
+}
+
