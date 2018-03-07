@@ -5,6 +5,7 @@
 #include <math.h>
 
 static const unsigned int primes[] = {
+  5, 11, 23, 
   53, 97, 193, 389, 
   769, 1543, 3079, 6151, 
   12289, 24593, 49157, 98317,
@@ -69,10 +70,13 @@ int hashtable_insert(struct hashtable *h, void *key, void *value)
 {
     unsigned int index;
     struct hashtable_entry *new_entry;
+	long long key_value;
 
+	/*
 	if (++(h->entrycount) > h->loadlimit) {
         hashtable_expand(h);
-	}   
+	}
+	*/
     
 	new_entry = (struct hashtable_entry *)malloc(sizeof(struct hashtable_entry));
     if (new_entry == NULL) { 
@@ -84,6 +88,8 @@ int hashtable_insert(struct hashtable *h, void *key, void *value)
 	index = new_entry->hash % h->tablelength;
 
 	new_entry->key = key;
+	key_value = *(long long*)new_entry->key;
+
 	new_entry->value = value;
 	new_entry->next = h->table[index];
     h->table[index] = new_entry; 
@@ -176,6 +182,7 @@ void *hashtable_remove(struct hashtable *h, void *key)
     entry = h->table[index];
     while (entry != NULL)
     {
+		long long key_value = *(long long*)entry->key;
 		if ((hashvalue == entry->hash) && (h->equalfn(key, entry->key)))
         {
 			*pentry = entry->next;

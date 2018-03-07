@@ -29,4 +29,6 @@ int hashtable_insert(struct hashtable *h, void *key, void *value);
 
 void *hashtable_search(struct hashtable *h, void *key);
 
+void *hashtable_remove(struct hashtable *h, void *key);
+
 #endif
