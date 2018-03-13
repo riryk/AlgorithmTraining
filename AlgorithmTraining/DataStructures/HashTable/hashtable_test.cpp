@@ -79,7 +79,7 @@ void hashtable_test()
 	}
 
 	long long keys_to_remove[] = { 1008, 1034, 1037, 1039, 1000, 1001, 1002 };
-
+    
     hashtable_insert_test(table, keys);
 	hashtable_remove_test(table, &keys_to_remove[0]);
 	hashtable_remove_test(table, &keys_to_remove[1]);
@@ -89,5 +89,7 @@ void hashtable_test()
 	hashtable_remove_test(table, &keys_to_remove[5]);
     hashtable_remove_test(table, &keys_to_remove[6]);
 
-	free(keys);
+	long long key_to_search = 1003;
+	hashtable_search(table, &key_to_search);
+    hashtable_destroy(table, false);
 }

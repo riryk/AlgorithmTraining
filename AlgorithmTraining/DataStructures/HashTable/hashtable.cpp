@@ -16,7 +16,7 @@ static const unsigned int primes[] = {
 };
 
 const unsigned int prime_table_length = sizeof(primes) / sizeof(primes[0]);
-const float max_load_factor = 0.65;
+const float max_load_factor = 2;
 
 struct hashtable* create_hashtable(
 	unsigned int minsize,
@@ -72,12 +72,10 @@ int hashtable_insert(struct hashtable *h, void *key, void *value)
     struct hashtable_entry *new_entry;
 	long long key_value;
 
-	/*
 	if (++(h->entrycount) > h->loadlimit) {
         hashtable_expand(h);
 	}
-	*/
-    
+
 	new_entry = (struct hashtable_entry *)malloc(sizeof(struct hashtable_entry));
     if (new_entry == NULL) { 
 		--(h->entrycount); 

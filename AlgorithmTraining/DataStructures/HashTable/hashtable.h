@@ -31,4 +31,6 @@ void *hashtable_search(struct hashtable *h, void *key);
 
 void *hashtable_remove(struct hashtable *h, void *key);
 
+void hashtable_destroy(struct hashtable *h, bool free_values);
+
 #endif
