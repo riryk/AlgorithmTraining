@@ -52,13 +52,13 @@ static struct hashtable *hashtable_create()
 	return h;
 }
 
-static void hashtable_insert_test(struct hashtable *h, long long* keys)
+static void hashtable_insert_test(struct hashtable *h, long long* keys[])
 {
 	int i;
 
     for (i = 0; i < ItemCount; i++)
     {
-	    hashtable_insert(h, keys + i, "value");
+	    hashtable_insert(h, keys[i], "value");
 	}
 }
 
@@ -70,19 +70,24 @@ static void hashtable_remove_test(struct hashtable *h, void *key)
 void hashtable_test()
 {
     struct hashtable *table = hashtable_create();
-	long long* keys = (long long*)malloc(sizeof(long long) * ItemCount);
+	long long* keys[ItemCount];
     int i;
     for (i = 0; i < ItemCount; i++)
     {
-        keys[i] = (long long)(1000 + i);
+		keys[i] = (long long*)malloc(sizeof(long long));
+        *keys[i] = (long long)(1000 + i);
 	}
 
-	long long keys_to_remove[] = { 1000, 1001, 1002 };
+	long long keys_to_remove[] = { 1008, 1034, 1037, 1039, 1000, 1001, 1002 };
 
     hashtable_insert_test(table, keys);
 	hashtable_remove_test(table, &keys_to_remove[0]);
 	hashtable_remove_test(table, &keys_to_remove[1]);
 	hashtable_remove_test(table, &keys_to_remove[2]);
+	hashtable_remove_test(table, &keys_to_remove[3]);
+	hashtable_remove_test(table, &keys_to_remove[4]);
+	hashtable_remove_test(table, &keys_to_remove[5]);
+    hashtable_remove_test(table, &keys_to_remove[6]);
 
 	free(keys);
 }
