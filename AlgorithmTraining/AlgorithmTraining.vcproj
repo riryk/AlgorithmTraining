@@ -317,6 +317,18 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="Heap"
+				>
+				<File
+					RelativePath=".\DataStructures\Heap\heap.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\Heap\heap.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<File
 			RelativePath=".\ReadMe.txt"
