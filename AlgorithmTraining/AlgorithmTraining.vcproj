@@ -330,6 +330,26 @@
 				</File>
 			</Filter>
 		</Filter>
+		<Filter
+			Name="Dfs"
+			>
+			<File
+				RelativePath=".\Dfs\dfs_adjacency_matrix.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Dfs\dfs_adjacency_matrix.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Dfs\dfs_adjacency_list.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Dfs\dfs_adjacency_list.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\ReadMe.txt"
 			>
