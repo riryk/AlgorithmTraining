@@ -4,13 +4,14 @@
 #include <math.h>  
 #include "DataStructures/HashTable/hashtable_test.h"
 #include "DataStructures/Heap/heap.h"
+#include "GraphCycle/graph_cycle.h"
 
 using namespace System;
 using namespace std;
 
 int main(array<System::String ^> ^args)
 {
-	heap_test();
+	naive_is_cycle_test();
 
     return 0;
 }

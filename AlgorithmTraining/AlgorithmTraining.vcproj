@@ -350,6 +350,18 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="GraphCycle"
+			>
+			<File
+				RelativePath=".\GraphCycle\graph_cycle.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\GraphCycle\graph_cycle.h"
+				>
+			</File>
+		</Filter>
 		<File
 			RelativePath=".\ReadMe.txt"
 			>
