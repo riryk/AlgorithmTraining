@@ -354,7 +354,11 @@
 			Name="GraphCycle"
 			>
 			<File
-				RelativePath=".\GraphCycle\graph_cycle.cpp"
+				RelativePath=".\GraphCycle\graph_cycle_naive.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\GraphCycle\graph_cycle_rank.cpp"
 				>
 			</File>
 			<File

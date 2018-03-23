@@ -14,9 +14,17 @@ struct Graph
     struct Edge* edges;
 };
 
+struct Subset
+{
+    int parent;
+    int rank;
+};
+
 struct Graph* createGraph(int vertex_count, int edges_count);
 
 int naive_find(int parent[], int i);
+
+int rank_find(struct Subset subsets[], int i);
 
 void naive_union(int parent[], int x, int y);
 
