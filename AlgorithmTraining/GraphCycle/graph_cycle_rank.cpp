@@ -44,7 +44,7 @@ void rank_union(struct Subset subsets[], int x, int y)
 
 int rank_is_cycle(struct Graph* graph)
 {
-	struct subset *subsets = (struct subset*)malloc(graph->vertex_count * sizeof(struct subset));
+	struct Subset *subsets = (struct Subset*)malloc(graph->vertex_count * sizeof(struct Subset));
 
 	for (int v = 0; v < graph->vertex_count; ++v)
     {
@@ -54,43 +54,39 @@ int rank_is_cycle(struct Graph* graph)
 
 	for (int i = 0; i < graph->edges_count; ++i)
     {
-		int x = naive_find(parent, graph->edges[i].src);
-		int y = naive_find(parent, graph->edges[i].dest);
+		int x = rank_find(subsets, graph->edges[i].src);
+		int y = rank_find(subsets, graph->edges[i].dest);
  
         if (x == y)
             return 1;
  
-        naive_union(parent, x, y);
+        rank_union(subsets, x, y);
     }
 }
 
-int isCycle( struct Graph* graph )
+void rank_is_cycle_test()
 {
-    int V = graph->V;
-    int E = graph->E;
- 
-    // Allocate memory for creating V sets
-    struct subset *subsets =
-        (struct subset*) malloc( V * sizeof(struct subset) );
- 
-    for (int v = 0; v < V; ++v)
-    {
-        subsets[v].parent = v;
-        subsets[v].rank = 0;
-    }
- 
-    // Iterate through all edges of graph, find sets of both
-    // vertices of every edge, if sets are same, then there is
-    // cycle in graph.
-    for(int e = 0; e < E; ++e)
-    {
-        int x = find(subsets, graph->edge[e].src);
-        int y = find(subsets, graph->edge[e].dest);
- 
-        if (x == y)
-            return 1;
- 
-        Union(subsets, x, y);
-    }
-    return 0;
+    /* graph
+         0
+        |  \
+        |    \
+        1-----2 */    
+    int vertex_count = 3;
+	int edges_couunt = 3;
+
+    struct Graph* graph = createGraph(vertex_count, edges_couunt);
+
+    graph->edges[0].src = 0;
+    graph->edges[0].dest = 1;
+
+    graph->edges[1].src = 1;
+    graph->edges[1].dest = 2;
+
+    graph->edges[2].src = 0;
+    graph->edges[2].dest = 2;
+    
+	int is_cycle = rank_is_cycle(graph);
 }
+
+
+

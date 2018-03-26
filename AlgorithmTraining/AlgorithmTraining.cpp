@@ -11,7 +11,7 @@ using namespace std;
 
 int main(array<System::String ^> ^args)
 {
-	naive_is_cycle_test();
+	rank_is_cycle_test();
 
     return 0;
 }

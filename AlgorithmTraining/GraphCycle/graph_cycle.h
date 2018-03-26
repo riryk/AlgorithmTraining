@@ -28,8 +28,14 @@ int rank_find(struct Subset subsets[], int i);
 
 void naive_union(int parent[], int x, int y);
 
+void rank_union(struct Subset subsets[], int x, int y);
+
 int naive_is_cycle(struct Graph* graph);
 
+int rank_is_cycle(struct Graph* graph);
+
 void naive_is_cycle_test();
+
+void rank_is_cycle_test();
 
 #endif

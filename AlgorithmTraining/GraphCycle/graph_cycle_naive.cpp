@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-struct Graph* naive_createGraph(int vertex_count, int edges_count)
+struct Graph* createGraph(int vertex_count, int edges_count)
 {
     struct Graph* graph = (struct Graph*) malloc(sizeof(struct Graph));
 	graph->vertex_count = vertex_count;
@@ -59,7 +59,7 @@ void naive_is_cycle_test()
     int vertex_count = 3;
 	int edges_couunt = 3;
 
-    struct Graph* graph = naive_createGraph(vertex_count, edges_couunt);
+    struct Graph* graph = createGraph(vertex_count, edges_couunt);
 
     graph->edges[0].src = 0;
     graph->edges[0].dest = 1;
