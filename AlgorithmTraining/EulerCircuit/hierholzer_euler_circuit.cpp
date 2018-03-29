@@ -63,4 +63,19 @@ void printCircuit_test()
     adj1[2].push_back(0);
 
     circuit1 = printCircuit(adj1);
+
+    adj2.resize(7);
+
+    adj2[0].push_back(1);
+    adj2[0].push_back(6);
+    adj2[1].push_back(2);
+    adj2[2].push_back(0);
+    adj2[2].push_back(3);
+    adj2[3].push_back(4);
+    adj2[4].push_back(2);
+    adj2[4].push_back(5);
+    adj2[5].push_back(0);
+    adj2[6].push_back(4);
+
+	circuit2 = printCircuit(adj2);
 }
