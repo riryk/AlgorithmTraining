@@ -53,8 +53,8 @@ std::vector<int> printCircuit(std::vector<std::vector<int>> adj)
 
 void printCircuit_test()
 {
-	std::vector<std::vector<int>> adj1, adj2;
-	std::vector<int> circuit1, circuit2;
+	std::vector<std::vector<int>> adj1, adj2, adj3;
+	std::vector<int> circuit1, circuit2, circuit3;
 
     adj1.resize(3);
 
@@ -78,4 +78,14 @@ void printCircuit_test()
     adj2[6].push_back(4);
 
 	circuit2 = printCircuit(adj2);
+
+    adj3.resize(5);
+    adj3[0].push_back(1);
+    adj3[1].push_back(3);
+    adj3[1].push_back(2);
+    adj3[2].push_back(0);
+    adj3[3].push_back(4);
+    adj3[4].push_back(1);
+
+    circuit3 = printCircuit(adj3);
 }
