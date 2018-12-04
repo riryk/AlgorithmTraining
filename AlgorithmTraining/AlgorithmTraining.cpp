@@ -4,6 +4,7 @@
 #include <math.h>  
 #include "DataStructures/HashTable/hashtable_test.h"
 #include "DataStructures/Heap/heap.h"
+#include "DataStructures/BinaryTree/leet951.h"
 #include "GraphCycle/graph_cycle.h"
 #include "EulerCircuit/hierholzer_euler_circuit.h"
 
@@ -12,7 +13,6 @@ using namespace std;
 
 int main(array<System::String ^> ^args)
 {
-	printCircuit_test();
-
+	leet951_test();
     return 0;
 }

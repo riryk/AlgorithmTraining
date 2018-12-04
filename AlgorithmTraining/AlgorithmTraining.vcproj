@@ -329,6 +329,18 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="BinaryTree"
+				>
+				<File
+					RelativePath=".\DataStructures\BinaryTree\leet951.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\BinaryTree\leet951.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Dfs"
@@ -375,6 +387,22 @@
 			</File>
 			<File
 				RelativePath=".\EulerCircuit\hierholzer_euler_circuit.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="Dp"
+			>
+			<File
+				RelativePath=".\Dp\Leet879.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Dp\Leet879.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Dp\Leet879.txt"
 				>
 			</File>
 		</Filter>
