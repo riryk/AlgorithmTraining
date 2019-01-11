@@ -363,6 +363,62 @@
 			</File>
 		</Filter>
 		<Filter
+			Name="Arrays"
+			>
+			<Filter
+			    Name="dp"
+			    >
+			    <File
+				    RelativePath=".\Arrays\dp\Leet62.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\Arrays\dp\Leet62.h"
+				>
+			    </File>
+				<File
+				    RelativePath=".\Arrays\dp\Leet62.txt"
+				>
+			    </File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="IOI"
+			>
+			<Filter
+			    Name="2007"
+			    >
+			    <File
+				    RelativePath=".\IOI\2007\aliens.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\aliens.h"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\aliens.txt"
+				>
+			    </File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Greedy"
+			>
+			<File
+				RelativePath=".\Greedy\leet955.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Greedy\leet955.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Greedy\leet955.txt"
+				>
+			</File>
+		</Filter>
+		<Filter
 			Name="GraphCycle"
 			>
 			<File

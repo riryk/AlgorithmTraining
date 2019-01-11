@@ -7,12 +7,13 @@
 #include "DataStructures/BinaryTree/leet951.h"
 #include "GraphCycle/graph_cycle.h"
 #include "EulerCircuit/hierholzer_euler_circuit.h"
+#include "Arrays/dp/leet62.h"
 
 using namespace System;
 using namespace std;
 
 int main(array<System::String ^> ^args)
 {
-	leet951_test();
+	uniquePaths_test();
     return 0;
 }
