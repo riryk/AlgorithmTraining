@@ -36,27 +36,28 @@ int minrec(vector<coords> sorted, state s, int a, int n)
   if (s.i == n) return 0;
   if (memo.count(s)) return memo[s];
   
+  int ret = 0;
   short min = 1500;
   coords cur = sorted[s.i];
   if (minx[cur.y] == cur.x && cur.y < s.loup && cur.y > s.hidown) //left
   {  
 	 state next = state(s.i + 1, s.loup, s.hidown, s.loy, s.hiy);
-	 short cost = minrec(sorted, next, n) + cur.x;
+	 short cost = minrec(sorted, next, a, n) + cur.x;
 	 if (cost < ret) ret = cost;
   }
   if (miny[cur.x] == cur.y && cur.y < s.loy) { //down
 	 state next = state(s.i + 1, s.loup, max(cur.y, s.hidown), s.loy, s.hiy);
-	 short cost = minrec(sorted, next, n) + cur.y; 
+	 short cost = minrec(sorted, next, a, n) + cur.y; 
 	 if (cost < ret) ret = cost;
   }
   if (maxy[cur.x] == cur.y && cur.y > s.hiy) { //up
-	 state next = state(s.i + 1, min(cur.y, s.loup), s.loy, s.hiy);
-	 short cost = minrec(sorted, next, n) + a - cur.y; 
+	 state next = state(s.i + 1, min(cur.y, s.loup), s.hidown, s.loy, s.hiy);
+	 short cost = minrec(sorted, next, a, n) + a - cur.y; 
 	 if (cost < ret) ret = cost;
   }
   if (maxx[cur.y] == cur.x) { // right
 	 state next = state(s.i + 1, s.loup, s.hidown, min(cur.y, s.loy), max(cur.y, s.hiy)); 
-	 short cost = minrec(sorted, next, n) + a - cur.x; 
+	 short cost = minrec(sorted, next, a, n) + a - cur.x; 
 	 if (cost < ret) ret = cost;
   }
 

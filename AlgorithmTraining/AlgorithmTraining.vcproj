@@ -412,6 +412,30 @@
 				    RelativePath=".\IOI\2007\chip.txt"
 				>
 			    </File>
+				<File
+				    RelativePath=".\IOI\2007\fish.txt"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\fish.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\fish.h"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\robot.txt"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\robot.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\robot.h"
+				>
+			    </File>
 			</Filter>
 		</Filter>
 		<Filter
