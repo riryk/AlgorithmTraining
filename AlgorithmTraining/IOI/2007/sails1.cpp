@@ -5,6 +5,8 @@
 #include <errno.h>
 #include "sails.h"
 
+//https://oj.uz/submission/86583
+
 using namespace System;
 using namespace std;
 
