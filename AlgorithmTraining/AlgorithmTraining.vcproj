@@ -341,6 +341,22 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+			    Name="FenwickTree"
+			    >
+			    <File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.cpp"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.h"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.txt"
+				    >
+			    </File>
+		</Filter>
 		</Filter>
 		<Filter
 			Name="Dfs"
@@ -434,6 +450,34 @@
 			    </File>
 				<File
 				    RelativePath=".\IOI\2007\robot.h"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\flood.txt"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\flood.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\flood.h"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\sails.txt"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\sails1.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\sails.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\sails.h"
 				>
 			    </File>
 			</Filter>
