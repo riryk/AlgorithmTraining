@@ -480,6 +480,18 @@
 				    RelativePath=".\IOI\2007\sails.h"
 				>
 			    </File>
+				<File
+				    RelativePath=".\IOI\2007\miners.txt"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\miners.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\miners.h"
+				>
+			    </File>
 			</Filter>
 		</Filter>
 		<Filter
