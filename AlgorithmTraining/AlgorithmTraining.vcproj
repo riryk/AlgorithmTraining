@@ -465,6 +465,18 @@
 				>
 			    </File>
 				<File
+				    RelativePath=".\IOI\2007\training.txt"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\training.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\training.h"
+				>
+			    </File>
+				<File
 				    RelativePath=".\IOI\2007\sails.txt"
 				>
 			    </File>
