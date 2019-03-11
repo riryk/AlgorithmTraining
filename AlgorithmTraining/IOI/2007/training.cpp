@@ -73,3 +73,60 @@ void init()
    parent[0] = pair<int, int>(-1, -1);
    treeInit(0);
 }
+
+void calcLCA()
+{
+   for (int i = 0; i < tm; i++)
+   {
+	   int u = E[i].u;
+	   int v = E[i].v;
+	   while (depth[u] > depth[v]) u = parent[u].first;
+       while (depth[v] > depth[u]) v = parent[v].first;
+	   while (u != v)
+	   {
+		   u = parent[u].first;
+           v = parent[v].first;
+	   }
+	   E[i].LCA = u;
+   }
+}
+
+bool orderByLCAFinishTime(const Edge &A, const Edge &B) 
+{
+   return finish[A.LCA] < finish[B.LCA];
+}
+
+void solve()
+{
+   pair<int, int> U, V;
+   for (int i = 0; i < tm; ++i) 
+   {
+      if (E[i].cost != 0 && color[E[i].u] != color[E[i].v])
+		  continue;
+
+	  int L = E[i].LCA;
+      int sum = E[i].cost;
+
+      for (U = pair<int, int>(E[i].u, 0); U.first != L; U = parent[U.first]) sum += dp[U.first][U.second];
+	  for (V = pair<int, int>(E[i].v, 0); V.first != L; V = parent[V.first]) sum += dp[V.first][V.second];
+
+      for (int mask = (1<<degree[L])-1; mask >= 0; --mask)
+	  {
+          if (!(mask & U.second || mask & V.second)) 
+		  {
+			  if (sum + dp[L][mask | U.second | V.second] > dp[L][mask])
+			  {
+                  dp[L][mask] = sum + dp[L][mask | U.second | V.second];
+			  }
+		  }
+	  }
+   }
+}
+
+void findMaxAddedEdges()
+{
+   load();
+   init();
+   calcLCA();
+   sort(E, E + tm, orderByLCAFinishTime);
+}
