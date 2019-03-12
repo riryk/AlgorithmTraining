@@ -355,6 +355,17 @@
 			    <File
 				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.txt"
 				    >
+			    </File><File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.cpp"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.h"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.txt"
+				    >
 			    </File>
 		</Filter>
 		</Filter>
@@ -474,6 +485,18 @@
 			    </File>
 				<File
 				    RelativePath=".\IOI\2007\training.h"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\pairs.txt"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\pairs.cpp"
+				>
+			    </File>
+				<File
+				    RelativePath=".\IOI\2007\pairs.h"
 				>
 			    </File>
 				<File
