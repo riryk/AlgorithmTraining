@@ -413,6 +413,22 @@
 			Name="IOI"
 			>
 			<Filter
+			    Name="2006"
+			    >
+			    <File
+				    RelativePath=".\IOI\2006\pyramid.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2006\pyramid.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2006\pyramid.txt"
+				>
+				</File>
+			</Filter>
+			<Filter
 			    Name="2007"
 			    >
 			    <File

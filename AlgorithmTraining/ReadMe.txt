@@ -44,3 +44,7 @@ https://polycode.livejournal.com/29426.html Microsoft question.
 HashMap implementation: https://medium.com/@aozturk/simple-hash-map-hash-table-implementation-in-c-931965904250
 
 
+
+
+IOI:
+https://www.iarcs.org.in/inoi/online-study-material/problems/pyramid-soln.php#solution
