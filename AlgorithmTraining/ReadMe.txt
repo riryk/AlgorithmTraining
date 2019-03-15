@@ -47,4 +47,9 @@ HashMap implementation: https://medium.com/@aozturk/simple-hash-map-hash-table-i
 
 
 IOI:
-https://www.iarcs.org.in/inoi/online-study-material/problems/pyramid-soln.php#solution
+training web site:  https://www.iarcs.org.in/inoi/online-study-material/problems/pyramid-soln.php#solution
+chineese solutions:  http://www.pudn.com/Download/item/id/640393.html
+ioi trainings: https://github.com/keshav57/ioi-training/tree/master/IOI
+
+Chineeze blog: https://www.cnblogs.com/OIerPrime/p/9130668.html
+
