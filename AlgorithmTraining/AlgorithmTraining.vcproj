@@ -429,6 +429,22 @@
 				</File>
 			</Filter>
 			<Filter
+			    Name="2008"
+			    >
+			    <File
+				    RelativePath=".\IOI\2008\type_printer.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\type_printer.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\type_printer.txt"
+				>
+				</File>
+			</Filter>
+			<Filter
 			    Name="2007"
 			    >
 			    <File

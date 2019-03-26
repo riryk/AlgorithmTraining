@@ -1,39 +1,73 @@
 #include "stdafx.h"
-#include "aliens.h"
+#include "type_printer.h"
 #include <vector>  
+#include <algorithm> 
 #include <errno.h>
 #include <math.h>  
 
-int findEdge(int x0, int y0, int dx, int dy);
+using namespace System;
+using namespace std;
 
-bool isRed(int x, int y) 
-{ 
-   return 1;
-}
-
-int findCenter(int n, int x0, int y0)
+struct str
 {
-   int xr = findEdge(x0, y0, 1, 0);
-   return -1;
-}
-
-int findEdge(int x0, int y0, int dx, int dy) 
-{
-   int i = 0;
-   while (isRed(x0 + (1 << i) * dx, y0 + (1 << i) * dy)) 
-	   i++;
-   
-   int lo = 1 << (i - 1);
-   int hi = 1 << i;
-
-   while (lo < hi) 
+   char s[30];
+   void scan()
    {
-      int mid = (lo + hi) / 2;
-	  if (isRed(x0 + mid * dx, y0 + mid * dy))
-		  lo = mid + 1;
-	  else 
-		  hi = mid;
+      scanf("%s", s);     
    }
+   bool operator <(const str &p)
+   {
+	  return strcmp(s, p.s) > 0;
+   }
+};
 
-   return lo - 1;
+const int inf = 'z' + 1;
+struct str s[25000];
+int type_print_n;
+vector<char> q;
+
+bool str_comp(const str &x, const str &y)
+{
+   return strlen(x.s) > strlen(y.s);
+}
+
+void type_printer()
+{
+   scanf("%d", &type_print_n);
+   for (int i = 0; i < type_print_n; i++)
+   {
+	   s[i].scan();
+   }
+   int max_el = min_element(s, s + type_print_n, str_comp) - s;
+   swap(s[0], s[max_el]);
+   for (int i = 1; i < type_print_n; i++)
+	   for (int j = 0; s[i].s[j]; ++j)
+		   if (s[0].s[j] == s[i].s[j]) s[i].s[j] = inf;
+
+   sort(s + 1, s + type_print_n);
+   char t[30] = "", p = 0;
+   for (int i = type_print_n; i >= 0; i--)
+   {
+	   for (int j = 0; s[i].s[j]; ++j)
+		   s[i].s[j] = s[0].s[j];
+
+	   for (int j = 0; j < p; j++)
+	   {
+		   if (s[i].s[j] != t[j])
+		   {
+               while (j < p)
+			   {
+				   q.push_back('-');
+				   --p;
+			   }
+			   break;
+		   }
+	   }
+
+       for (int j = 0; s[i].s[j]; ++j)
+	   {
+		   q.push_back(t[p++] = s[i].s[j]);
+	   }
+	   q.push_back('P');
+   }
 }
