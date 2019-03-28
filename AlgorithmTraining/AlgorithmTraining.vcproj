@@ -443,6 +443,18 @@
 				    RelativePath=".\IOI\2008\type_printer.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2008\islands.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\islands.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\islands.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2007"
