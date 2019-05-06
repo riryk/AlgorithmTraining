@@ -367,7 +367,23 @@
 				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.txt"
 				    >
 			    </File>
-		</Filter>
+		     </Filter>
+			 <Filter
+			    Name="SegmentTree"
+			    >
+			    <File
+				    RelativePath=".\DataStructures\SegmentTree\segment_tree.cpp"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\SegmentTree\segment_tree.h"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\SegmentTree\segment_tree.txt"
+				    >
+			    </File>
+		     </Filter>
 		</Filter>
 		<Filter
 			Name="Dfs"
@@ -453,6 +469,18 @@
 				</File>
 				<File
 				    RelativePath=".\IOI\2008\islands.txt"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\fish.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\fish.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\fish.txt"
 				>
 				</File>
 			</Filter>
