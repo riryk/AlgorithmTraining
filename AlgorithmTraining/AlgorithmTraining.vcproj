@@ -476,6 +476,10 @@
 				>
 				</File>
 				<File
+				    RelativePath=".\IOI\2008\fish1.cpp"
+				>
+				</File>
+				<File
 				    RelativePath=".\IOI\2008\fish.h"
 				>
 				</File>
