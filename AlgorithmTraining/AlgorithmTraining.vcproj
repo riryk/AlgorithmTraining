@@ -487,6 +487,18 @@
 				    RelativePath=".\IOI\2008\fish.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2008\linear_garden.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\linear_garden.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\linear_garden.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2007"

@@ -53,6 +53,8 @@ ioi trainings: https://github.com/keshav57/ioi-training/tree/master/IOI
 
 Chineeze blog: https://www.cnblogs.com/OIerPrime/p/9130668.html
 
+https://thyroidr.github.io/IOI/IOI-2008-Linear-Garden/
+
 
  One month ago during DR on prod IAN did not place an order.
  I looked at splunk logs and saw it was due to the nack: 
