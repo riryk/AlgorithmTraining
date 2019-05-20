@@ -1,5 +1,5 @@
-#ifndef ioi_2007_type_printer_h
-#define ioi_2007_type_printer_h
+#ifndef ioi_2007_teleporters_h
+#define ioi_2007_teleporters_h
 
 #endif
 

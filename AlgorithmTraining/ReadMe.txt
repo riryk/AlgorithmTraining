@@ -57,6 +57,9 @@ One blog: https://thyroidr.github.io/IOI/IOI-2008-Linear-Garden/
 
 Dynamic programming resource: file:///C:/Users/Ruslan_Iryk/Downloads/Dynamic%20Programming%20Type%20(1).pdf
 
+Old IOI problems with solutions: https://github.com/harungunaydin/Competitive-Programming-Solutions/tree/master/IOI
+
+
 
 
 

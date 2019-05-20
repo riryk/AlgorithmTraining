@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "type_printer.h"
+#include "teleporters.h"
 #include <vector>  
 #include <algorithm> 
 #include <errno.h>
@@ -8,66 +8,54 @@
 using namespace System;
 using namespace std;
 
-struct str
+namespace teleporters
 {
-   char s[30];
-   void scan()
-   {
-      scanf("%s", s);     
-   }
-   bool operator <(const str &p)
-   {
-	  return strcmp(s, p.s) > 0;
-   }
-};
+   #define MAX_X 2000000
 
-const int inf = 'z' + 1;
-struct str s[25000];
-int type_print_n;
-vector<char> q;
+   int ans;
+   int N, M;
+   int right[MAX_X+1];
+   bool vst[MAX_X+1];
+   vector<int> cycles;
 
-bool str_comp(const str &x, const str &y)
-{
-   return strlen(x.s) > strlen(y.s);
-}
-
-void type_printer()
-{
-   scanf("%d", &type_print_n);
-   for (int i = 0; i < type_print_n; i++)
-   {
-	   s[i].scan();
-   }
-   int max_el = min_element(s, s + type_print_n, str_comp) - s;
-   swap(s[0], s[max_el]);
-   for (int i = 1; i < type_print_n; i++)
-	   for (int j = 0; s[i].s[j]; ++j)
-		   if (s[0].s[j] == s[i].s[j]) s[i].s[j] = inf;
-
-   sort(s + 1, s + type_print_n);
-   char t[30] = "", p = 0;
-   for (int i = type_print_n; i >= 0; i--)
-   {
-	   for (int j = 0; s[i].s[j]; ++j)
-		   s[i].s[j] = s[0].s[j];
-
-	   for (int j = 0; j < p; j++)
-	   {
-		   if (s[i].s[j] != t[j])
-		   {
-               while (j < p)
-			   {
-				   q.push_back('-');
-				   --p;
-			   }
-			   break;
+   void dfs(int x, long long y) {
+       while(1) {
+		   if (vst[x]) {
+			   cycles.push_back(y);
+			   return;
+		   }  
+		   if (x == MAX_X+1) {
+			   ans += y;
+			   return;
 		   }
+		   if (right[x] != x + 1) y++;
+           x = right[x];
 	   }
+   }
 
-       for (int j = 0; s[i].s[j]; ++j)
-	   {
-		   q.push_back(t[p++] = s[i].s[j]);
+   void solve()
+   {
+	   scanf("%d%d", &N, &M);
+	   for (int i = 0; i < MAX_X+1; i++) right[i] = i + 1;
+	   for (int i = 0; i < N; i++) {
+          int a, b;
+          scanf("%d %d", &a, &b);
+          right[a - 1] = b; right[b - 1] = a;
 	   }
-	   q.push_back('P');
+	   for (int i = 0; i < MAX_X+1; i++) {
+		  if (vst[i]) continue;
+		  dfs(i, 0);
+	   }
+	   sort(cycles.begin(), cycles.end());
+	   while(M-- > 0){ 
+		  if (!cycles.empty()){
+			  ans+= 2 + cycles.back();
+			  cycles.pop_back();
+		  } else {
+			  cycles.push_back(1);
+			  ans++;
+		  }
+	   }
    }
 }
+

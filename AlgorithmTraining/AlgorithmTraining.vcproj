@@ -499,6 +499,18 @@
 				    RelativePath=".\IOI\2008\linear_garden.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2008\teleporters.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\teleporters.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2008\teleporters.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2007"
