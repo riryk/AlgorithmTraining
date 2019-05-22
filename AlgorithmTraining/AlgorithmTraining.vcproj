@@ -429,6 +429,22 @@
 			Name="IOI"
 			>
 			<Filter
+			    Name="2005"
+			    >
+			    <File
+				    RelativePath=".\IOI\2005\garden.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2005\garden.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2005\garden.txt"
+				>
+				</File>
+			</Filter>
+			<Filter
 			    Name="2006"
 			    >
 			    <File
