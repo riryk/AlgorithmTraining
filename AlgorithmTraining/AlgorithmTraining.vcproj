@@ -443,6 +443,18 @@
 				    RelativePath=".\IOI\2005\garden.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2005\birthday.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2005\birthday.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2005\birthday.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2006"
