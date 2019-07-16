@@ -487,6 +487,18 @@
 				    RelativePath=".\IOI\2009\hill.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2009\museum.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\museum.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\museum.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2008"
