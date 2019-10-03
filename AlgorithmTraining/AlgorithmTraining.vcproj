@@ -383,6 +383,14 @@
 				    RelativePath=".\DataStructures\SegmentTree\segment_tree.txt"
 				    >
 			    </File>
+				<File
+				    RelativePath=".\DataStructures\SegmentTree\segment_tree1.cpp"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\SegmentTree\segment_tree1.txt"
+				    >
+			    </File>
 		     </Filter>
 		</Filter>
 		<Filter
