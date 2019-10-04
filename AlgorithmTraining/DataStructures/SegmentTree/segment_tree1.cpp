@@ -36,7 +36,7 @@ int* constructTree(int arr[], int n)
 	return sg;
 }
 
-void updateTreeUtil(int arr[], int start, int end, int i, int diff, int* sg, int si)
+void updateTreeUtil(int start, int end, int i, int diff, int* sg, int si)
 {
     if (i < start || i > end)
 	{
@@ -48,15 +48,35 @@ void updateTreeUtil(int arr[], int start, int end, int i, int diff, int* sg, int
 	if (start != end)
 	{
 	    int mid = start + (end - start) / 2;
-	    updateTreeUtil(arr, start, mid, i, diff, sg, 2*si + 1);
-        updateTreeUtil(arr, mid + 1, end, i, diff, sg, 2*si + 2);
+	    updateTreeUtil(start, mid, i, diff, sg, 2*si + 1);
+        updateTreeUtil(mid + 1, end, i, diff, sg, 2*si + 2);
 	}
 }
 
 void updateTree(int arr[], int n, int i, int diff, int* sg)
 {
     arr[i] += diff;
-	updateTreeUtil(arr, 0, n - 1, i, diff, sg, 0);
+	updateTreeUtil(0, n - 1, i, diff, sg, 0);
+}
+
+void updateRangeUtil(int start, int end, int r_start, int r_end, int diff, int* sg, int si)
+{
+    if (start > end || r_start > end || r_end < start)
+	{
+		return;
+	}
+    
+    if (start == end)
+	{
+        sg[si] += diff;
+	}
+
+    int mid = (start + end) / 2;
+
+    updateRangeUtil(start, mid, r_start, r_end, diff, sg, 2 * si + 1);
+    updateRangeUtil(mid + 1, end, r_start, r_end, diff, sg, 2 * si + 2);
+    
+    sg[si] = sg[2*si + 1] + sg[2*si + 2];
 }
 
 int queryUtil(int start, int end, int left, int right, int* sg, int si)
