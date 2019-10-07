@@ -17,18 +17,47 @@ namespace lazy
 	int tree[MAX] = {0};
 	int lazy[MAX] = {0};
     
-	void updateSTRangeUtil(int start, int end, int us, int ue, int diff, int si)
+	void propagate(int start, int end, int si)
 	{
-		if (lazy[si] != 0)
+        if (lazy[si] != 0)
 		{
             tree[si] += (end - start + 1) * lazy[si];
-            if (start != end)
+			if (start != end)
 			{
-				lazy[2 * si + 1] += lazy[si];
-                lazy[2 * si + 2] += lazy[si];
+				lazy[2*si + 1] = lazy[si];
+                lazy[2*si + 2] = lazy[si];
 			}
 			lazy[si] = 0;
 		}
+	}
+
+	int getSumUtil(int start, int end, int qs, int qe, int si)
+	{
+		propagate(start, end, si);
+
+        if (start > end || qe < start || qs > end)
+		{
+			return 0;
+		}
+
+        if (start >= qs && end <= qe)
+		{
+			return tree[si];
+		}
+
+		int mid = (start + end) / 2;
+		return getSumUtil(start, mid + 1, qs, qe, 2 * si + 1)
+			+ getSumUtil(mid + 1, end, qs, qe, 2 * si + 2);
+	}
+
+    int getSum(int n, int qs, int qe)
+	{
+        return getSumUtil(0, n - 1, qs, qe, 0);
+	}
+
+	void updateSTRangeUtil(int start, int end, int us, int ue, int diff, int si)
+	{
+		propagate(start, end, si);
 
         if (start > end || ue < start || us > end)
 		{

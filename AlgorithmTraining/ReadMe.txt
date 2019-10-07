@@ -59,6 +59,7 @@ Dynamic programming resource: file:///C:/Users/Ruslan_Iryk/Downloads/Dynamic%20P
 
 Old IOI problems with solutions: https://github.com/harungunaydin/Competitive-Programming-Solutions/tree/master/IOI
 
+Old IOI problems: https://github.com/mukel/ProgrammingContests/tree/master/OldStuff/IOI
 
 
 
