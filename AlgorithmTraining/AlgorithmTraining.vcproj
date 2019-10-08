@@ -539,6 +539,18 @@
 				    RelativePath=".\IOI\2009\hiring.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2009\raisins.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\raisins.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\raisins.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2008"
