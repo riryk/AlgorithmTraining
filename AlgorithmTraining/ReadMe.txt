@@ -64,6 +64,14 @@ Old IOI problems: https://github.com/mukel/ProgrammingContests/tree/master/OldSt
 
 
 
+One way - is to open EOF and click F12 and check response from:
+https://pom-bff.qa.ns-orders.ipreo.com/v1/external-orders?dealId=2521472&entryFormat=Additive​​​​​​​
+
+
+
+
+
+
  
 
 
