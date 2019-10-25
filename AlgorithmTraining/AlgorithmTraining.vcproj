@@ -483,6 +483,18 @@
 				    RelativePath=".\IOI\2005\mountains.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2005\rivers.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2005\rivers.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2005\rivers.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2006"

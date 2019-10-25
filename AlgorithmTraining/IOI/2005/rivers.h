@@ -1,4 +1,4 @@
-#ifndef ioi_2005_mountains_h
-#define ioi_2005_mountains_h
+#ifndef ioi_2005_rivers_h
+#define ioi_2005_rivers_h
 
 #endif
