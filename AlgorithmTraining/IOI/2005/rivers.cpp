@@ -17,6 +17,7 @@ namespace rivers
    int s[103];
    int b[103];
    vector<pair<int, int>> E[103];
+   int saving[103][103];
    int totalCost = 0;
 
    void dfs_reprocess(int node, int d) {
@@ -40,5 +41,10 @@ namespace rivers
 		  E[a].push_back(make_pair(i, c));
 	   }
        dfs_reprocess(0, 0);
+	   for( int i = 0; i <= n; i++ )
+		  for( int j = 0; j <= n; j++ )
+			saving[i][j] = T[i] * (D[i] - D[j]);
+
+	   int cost = totalCost - f(s[0], 0, k);
    }
 }
