@@ -44,7 +44,5 @@ namespace rivers
 	   for( int i = 0; i <= n; i++ )
 		  for( int j = 0; j <= n; j++ )
 			saving[i][j] = T[i] * (D[i] - D[j]);
-
-	   int cost = totalCost - f(s[0], 0, k);
    }
 }
