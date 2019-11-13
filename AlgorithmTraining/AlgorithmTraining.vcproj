@@ -575,6 +575,18 @@
 				    RelativePath=".\IOI\2009\garage.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2009\mecho.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\mecho.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\mecho.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2008"

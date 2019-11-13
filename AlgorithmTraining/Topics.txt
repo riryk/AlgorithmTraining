@@ -130,5 +130,32 @@ http://buyside.qx.ipreo.com/services/v1/buyside-audit/order-event?CompanyOrionId
 http://buyside.qx.ipreo.com/services/v1/buyside-audit/order-event?companyOrionId=21195&startAuditDate=2019-11-06T00:00:00.000Z&endAuditDate=2019-11-07T00:00:00.000Z
 
 
+
+
+
+
+auditId = f968be6c-2e25-43fa-9e4a-ab0300d3b865
+300022078
+orderId = 74c50000-56af-0050-fdd7-08d762b2099a
+
+
+We have noticed that other hedge types are displayed in Compliance like this:
+
+AssetSwap,
+CashVsCash,
+DurationWeighted
+
+Do we need to display them like this?
+
+Asset Swap
+Cash/Cash
+Duration Weighted
+
+
+  
+
+
+
+
   
   
