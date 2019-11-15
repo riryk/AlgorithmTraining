@@ -587,6 +587,18 @@
 				    RelativePath=".\IOI\2009\mecho.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2009\regions.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\regions.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\regions.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2008"

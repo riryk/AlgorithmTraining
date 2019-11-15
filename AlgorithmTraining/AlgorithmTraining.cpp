@@ -10,12 +10,14 @@
 #include "Arrays/dp/leet62.h"
 #include "IOI/2007/flood.h"
 #include "IOI/2007/sails.h"
+#include "IOI/2009/regions.h"
 
 using namespace System;
 using namespace std;
+using namespace regions;
 
 int main(array<System::String ^> ^args)
 {
-	sails_test1();
+	solve();
     return 0;
 }
