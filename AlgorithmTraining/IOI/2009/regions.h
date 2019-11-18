@@ -6,5 +6,10 @@ namespace regions
 	void solve();
 }
 
+namespace regions1
+{ 
+	void solve();
+}
+
 #endif
 

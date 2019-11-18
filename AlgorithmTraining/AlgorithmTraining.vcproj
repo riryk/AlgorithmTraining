@@ -592,6 +592,10 @@
 				>
 				</File>
 				<File
+				    RelativePath=".\IOI\2009\regions1.cpp"
+				>
+				</File>
+				<File
 				    RelativePath=".\IOI\2009\regions.h"
 				>
 				</File>
