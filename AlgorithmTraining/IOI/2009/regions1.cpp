@@ -38,7 +38,7 @@ namespace regions1
 		ids[reg[u]].push_back(u);
         for (int i = 0; i < E[u].size(); i++)
 		{
-            dfs(E[u][i]); 
+           dfs(E[u][i]); 
 		}
         rid[u] = tid;
 	}
@@ -48,12 +48,17 @@ namespace regions1
         if (hid[u] == r) 
 			count++;
 		else
-			sol[r][hid[u]] += count;
+			sol[hid[u]][r] += count;
 
 		for (int i = 0; i < E[u].size(); i++)
 		{
             heavy(E[u][i], r, count);
 		}
+	}
+
+    int get(int left, int right, int y)
+	{
+		return upper_bound(ids[y].begin(), ids[y].end(), right) - lower_bound(ids[y].begin(), ids[y].end(), left); 
 	}
 
     void solve()
@@ -96,17 +101,19 @@ namespace regions1
 			   heavy(1,i,0);		
 		   }
 		}
-		int x, y;
+        
+		int x,y;
 		while (q--)
 		{
-           scanf("%i %i", &x, &y);
-		   if (my[x].size() > S)
-		   {
-			   printf("%i", sol[hid[x]][y]);
-		   }
+           scanf("%i %i",&x,&y);
+		   if (my[x].size() > S) printf("%i\n",sol[hid[x]][y]);
 		   else
 		   {
-
+               int ans = 0;
+			   for (int i = 0; i < my[x].size(); i++)
+			   {
+                   ans += get(lid[my[x][i]],rid[my[x][i]],y);
+			   }
 		   }
 		}
 	}

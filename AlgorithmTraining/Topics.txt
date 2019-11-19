@@ -151,6 +151,13 @@ Asset Swap
 Cash/Cash
 Duration Weighted
 
+ - Test if Quartz.IScheduler.Shutdown(waitForJobsToComplete: true) will wait until JobScheduler finishes. 
+ - Test if WebHost deployment will wait until instance finishes its work.
+ - Add ability to deploy IAN sequentially to instances.
+ - Add ability to deploy only JobScheduler. 
+ 
+ 
+
 
   
 
