@@ -603,6 +603,18 @@
 				    RelativePath=".\IOI\2009\regions.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2009\salesman.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\salesman.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2009\salesman.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2008"
