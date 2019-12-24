@@ -527,6 +527,18 @@
 				    RelativePath=".\IOI\2004\artemis.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2004\hermes.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2004\hermes.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2004\hermes.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2009"
