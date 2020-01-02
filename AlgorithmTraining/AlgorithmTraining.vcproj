@@ -539,6 +539,18 @@
 				    RelativePath=".\IOI\2004\hermes.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2004\empodia.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2004\empodia.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2004\empodia.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2009"
