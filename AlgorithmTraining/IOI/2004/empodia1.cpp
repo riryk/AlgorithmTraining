@@ -18,6 +18,7 @@ namespace empodia1
    int N;
    int A[NMAX];
    int stack[NMAX];
+   int sm[NMAX];
    int S;
 
    void init()
@@ -26,7 +27,7 @@ namespace empodia1
 	   for(int i = N-1; i >= 0; --i){
 		   while(S && A[stack[S-1]] > A[i]) --S;
 		   sm[i] = S ? stack[S-1] : N;
-           stack[S++] = i
+           stack[S++] = i;
 	   }
    }
 
@@ -35,7 +36,5 @@ namespace empodia1
        scanf("%d", &N);
 	   for(int i = 0; i < N; i++)
           scanf("%d", &A[i]);  
-	   
-       
    }
 }
