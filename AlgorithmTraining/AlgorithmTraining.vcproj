@@ -910,6 +910,18 @@
 			</File>
 		</Filter>
 		<Filter
+			Name="MinimumSpanningTree"
+			>
+			<File
+				RelativePath=".\MinimumSpanningTree\kruskal.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\MinimumSpanningTree\kruskal.h"
+				>
+			</File>
+		</Filter>
+		<Filter
 			Name="Dp"
 			>
 			<File
