@@ -892,6 +892,10 @@
 				RelativePath=".\GraphCycle\graph_cycle.cpp"
 				>
 			</File>
+			<File
+				RelativePath=".\GraphCycle\graph_cycle_fast.cpp"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="EulerCircuit"
