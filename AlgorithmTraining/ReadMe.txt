@@ -44,6 +44,11 @@ https://polycode.livejournal.com/29426.html Microsoft question.
 HashMap implementation: https://medium.com/@aozturk/simple-hash-map-hash-table-implementation-in-c-931965904250
 
 
+UOI
+https://oi.in.ua/category/uoi/ioi-sel/
+https://matholymp.org.ua/contests/types/olympiads/informatics/
+
+
 
 
 IOI:
@@ -60,8 +65,6 @@ Dynamic programming resource: file:///C:/Users/Ruslan_Iryk/Downloads/Dynamic%20P
 Old IOI problems with solutions: https://github.com/harungunaydin/Competitive-Programming-Solutions/tree/master/IOI
 
 Old IOI problems: https://github.com/mukel/ProgrammingContests/tree/master/OldStuff/IOI
-
-
 
 web site with solutions to IOI https://github.com/mostafa-saad/MyCompetitiveProgramming/tree/master/Olympiad/IOI/official/2003  
 

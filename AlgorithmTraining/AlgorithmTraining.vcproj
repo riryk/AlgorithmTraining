@@ -513,6 +513,34 @@
 				</File>
 			</Filter>
 			<Filter
+			    Name="2003"
+			    >
+			    <File
+				    RelativePath=".\IOI\2003\maintenance.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2003\maintenance.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2003\maintenance.txt"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2003\robots.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2003\robots.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2003\robots.txt"
+				>
+				</File>
+			</Filter>
+			<Filter
 			    Name="2004"
 			    >
 			    <File

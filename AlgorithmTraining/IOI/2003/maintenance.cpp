@@ -3,53 +3,79 @@
 #include <errno.h>
 #include <math.h>  
 #include <algorithm> 
+#include <set>
 
 using namespace System;
 using namespace std;
  
-namespace artemis
+namespace maintenance
 { 
-   #define MAXN 20005
-
-   class point
+   struct edge
    {
-      public:
-		int x,y,ind;
-        point() {  }
-		void read(int i) { scanf("%d %d",&x,&y); ind = i; }
-   } P[MAXN];
+	   int u,v,w;
+       bool operator < (const edge &e) const
+	   {
+		   return w < e.w;
+	   }
+   };
 
-   inline bool cmp( const point &a , const point &b )
+   const int MAXV = 200;
+
+   int V,E;
+   int u,v,w;
+   int P[MAXV];
+
+   multiset<edge> S;
+   multiset<edge>::iterator it,tmp;
+   
+   int find(int x)
    {
-	  return a.x < b.x;
+	   while(P[x]!=x) P[x]=find(P[x]);
+	   return P[x];
    }
 
-   int N,T;
-   int alt[MAXN];
-   int sol_alt[MAXN];
+   void unite(int x, int y)
+   {
+       int py = find(y);
+	   int px = find(x);
+	   P[py] = px;
+   }
+    
    void solve()
    {
-      int syc,t;
-      scanf("%d %d",&N,&T);
-	  for(int i = 1; i <= N; i++) P[i].read(i);
-	  sort(P+1,P+N+1,cmp);
-	  for(int i = 1; i <= N; i++)
-	  {
-         alt[i]=i;
-		 for(int j = 1; j <= i-1; j++)
-		 {
-			 if (P[i].y < P[j].y)
-			 {
-                alt[j]++;
-				alt[i]--;
-			 }
-		 }
-		 syc = 0;
-		 sol_alt[i] = alt[i];
-         for(int j = 1; j <= i-1; j++)
-		 {
-            t = sol_alt[i] - alt[j] - syc + sol_alt[j] + 1; 
-		 }
-	  }
+	   scanf("%d %d", &V,&E);
+       while (E--)
+	   {
+		   scanf("%d %d %d", &u,&v,&w);
+		   u--;v--;
+		   int mst = 0;
+		   for (int i = 0; i< V; i++) 
+			   P[i] = i;
+
+		   struct edge item;
+		   item.u = u;
+		   item.v = v;
+		   item.w = w;
+
+		   S.insert(item);
+		   for (it=S.begin(); it != S.end();)
+		   {
+			   int u = (*it).u;
+			   int v = (*it).v;
+			   int w = (*it).w;
+               if (find(u) != find(v))
+			   {
+				   unite(u,v);
+				   mst += w;
+                   it++;
+			   }
+			   else
+			   {
+                   tmp = it;
+				   it++;
+				   S.erase(tmp);
+			   }
+		   }
+	   }
    }
 }
