@@ -539,6 +539,18 @@
 				    RelativePath=".\IOI\2003\robots.txt"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2003\boundary.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2003\boundary.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2003\boundary.txt"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2004"
