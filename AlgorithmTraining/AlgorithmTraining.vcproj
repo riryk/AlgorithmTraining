@@ -513,6 +513,18 @@
 				</File>
 			</Filter>
 			<Filter
+			    Name="2010"
+			    >
+			    <File
+				    RelativePath=".\IOI\2010\language.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2010\language.h"
+				>
+				</File>
+			</Filter>
+			<Filter
 			    Name="2003"
 			    >
 			    <File
