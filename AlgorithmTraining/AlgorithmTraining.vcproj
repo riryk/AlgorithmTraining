@@ -333,6 +333,10 @@
 				Name="BinaryTree"
 				>
 				<File
+					RelativePath=".\DataStructures\BinaryTree\binary_tree_array.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\DataStructures\BinaryTree\leet951.cpp"
 					>
 				</File>
@@ -521,6 +525,14 @@
 				</File>
 				<File
 				    RelativePath=".\IOI\2010\language.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2010\traffic.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2010\traffic.h"
 				>
 				</File>
 			</Filter>
