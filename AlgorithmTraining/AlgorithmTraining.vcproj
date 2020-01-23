@@ -535,6 +535,14 @@
 				    RelativePath=".\IOI\2010\traffic.h"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2010\saveit.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2010\saveit.h"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2003"
