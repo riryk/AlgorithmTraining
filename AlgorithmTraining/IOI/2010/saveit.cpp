@@ -20,10 +20,10 @@ namespace saveit
     int dist[36][1000];
     int pr[36][1000];
 
-	void encode_bit(int bit){}
+	void encode_bit(int bit){ }
+	int decode_bit() { return 1; }
+	void hops(int h, int i, int dist) { }
 
-	int decode_bit(){}
-    
 	void bfs(int dist[], int pr[], int s) {
         for (int i = 0; i < n; i++) dist[i] = inf;
 		dist[s] = 0;
@@ -85,6 +85,25 @@ namespace saveit
 	int dist1[1000];
 	vector<int> edge1[1000];
 
+	void dfs(int s) 
+	{
+        for (int i = 0; i < edge1[s].size(); i++)
+		{
+		   int u = edge1[s][i];
+           dist1[u] = dist1[s] + d[u];
+		   dfs(u);
+		}
+	}
+    
+    struct decoder
+	{
+		int x[20], c;
+        decoder() : c(20) {}
+		int decode_num() {
+		   return 0;
+		}
+	};
+
 	void decode(int N, int H) 
 	{
 		for (int i = 0; i < N; i++){
@@ -95,6 +114,18 @@ namespace saveit
 		   }
 		   d[i] = 1;
 		   edge1[x].push_back(i);
+		}
+		dist1[0]=0;
+		dfs(0);
+		for (int i = 0; i < N; ++i) hops(0, i, dist1[i]);
+
+		decoder dc;
+        for (int i = 1; i < H; ++i) {
+		   for (int j = 1; j < N; ++j) {
+              d[j] = dc.decode_num() - 1;
+		   }
+		   dfs(0);
+		   for (int j = 0; j < N; ++j) hops(i, j, dist[j] - dist[i]);
 		}
 	}
 }

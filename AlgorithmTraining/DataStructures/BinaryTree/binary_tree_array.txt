@@ -1,0 +1,117 @@
+
+Although Canada is a large country, many areas are uninhabited, 
+and most of the population lives near the southern border. 
+
+The TransCanada Highway, completed in 1962, 
+connects the people living in this strip of land, 
+from St. John's in the East to Victoria in the West, 
+a distance of 7 821 km.
+
+Canadians like hockey. 
+After a hockey game, thousands of fans get in their cars 
+and drive home from the game, causing heavy congestion on the roads. 
+A wealthy entrepreneur wants to buy a hockey team and build a new hockey arena. 
+Your task is to help him select a location for the arena 
+to minimize the traffic congestion after a hockey game.
+
+The country is organized into cities connected by a network of roads. 
+All roads are bidirectional, and there is exactly one route connecting any pair of cities. 
+
+A route connecting the cities c0 and ck is a sequence of distinct cities c0, ..., ck 
+such that there is a road from ci-1 to ci for each i. 
+
+The new arena must be built in one of the cities, which we will call the arena city. 
+After a hockey game, all of the hockey fans travel from the arena city 
+to their home city, except those who already live in the arena city. 
+
+The amount of congestion on each road is proportional to the number of hockey fans 
+that travel along the road. 
+You must locate the arena city such that the amount of congestion on the most congested road is as small as possible. 
+If there are several equally good locations, you may choose any one.
+
+You are to implement a procedure LocateCentre(N,P,S,D). 
+N is a positive integer, the number of cities. 
+  The cities are numbered from 0 to N-1. 
+
+P is an array of N positive integers; 
+  for each i, P[i] is the number of hockey fans living in the city numbered i. 
+  
+The total number of hockey fans in all the cities will be at most 2 000 000 000. 
+S and D are arrays of N-1 integers each, specifying the locations of roads. 
+For each i, there is a road connecting the two cities whose numbers are S[i] and D[i]. 
+The procedure must return an integer, the number of the city that should be the arena city.
+
+Example
+
+As an example, consider the network of five cities in the top diagram on the right,
+where cities 0, 1 and 2 contain 10 hockey fans each, 
+and cities 3 and 4 contain 20 hockey fans each. 
+
+The middle diagram shows the congestions when the new arena is in city 2, 
+the worst congestion being 40 on the thicker arrow. 
+The bottom diagram shows the congestions when the new arena is in city 3, 
+the worst congestion being 30 on the thicker arrow. 
+
+Therefore, city 3 would be a better location for the arena than city 2. 
+The data for this example are in grader.in.3a.
+
+Note 
+We remind contestants that with the given constraints, 
+it is possible to submit a solution that passes Subtask 3 and fails Subtask 2. 
+However, remember that your final score 
+for the entire task is determined by only one of your submissions.
+
+Solution
+
+This was (by intention) a fairly standard task. 
+Though, it should be mentioned that graph problems always 
+are a bit trickier than one might at first think 
+because of the need to handle specific graph encodings.
+
+The information provided below will be expanded in the future, 
+but for now should help in understanding what each subtask 
+was expecting in the form of algorithms.
+
+Subtask 1: 
+  Quadratic works. 
+  Because of the highly regular (linear) structure of the network graph, 
+  it is easy to try each city as location for the arena, 
+  calculate the worst congestions and pick out the location 
+  where this worst congestion is minimal.
+  
+Subtask 2: 
+  Requires linear algorithm, 
+  but because there are only two leaves and the graph representation is highly regular, 
+  it is easy to see that one sweep over the cities along the roads 
+  suffices to determine the optimum location.
+  
+Subtask 3: 
+  Quadratic works, but now the general graph must be handled. 
+  Again, as in Subtask 1, 
+  every city can be tried as arena location, 
+  the worst congestion can then be calculated, 
+  and best location can be found.
+  
+Subtask 4: 
+  This is the full problem. 
+  A linear traversal of the graph, 
+  accumulating congestion information appropriately, 
+  enables one to determine the optimal location of the arena in linear time.
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
