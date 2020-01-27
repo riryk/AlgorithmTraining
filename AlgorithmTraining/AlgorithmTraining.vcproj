@@ -517,6 +517,18 @@
 				</File>
 			</Filter>
 			<Filter
+			    Name="2002"
+			    >
+			    <File
+				    RelativePath=".\IOI\2002\rods.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2002\rods.h"
+				>
+				</File>
+			</Filter>
+			<Filter
 			    Name="2010"
 			    >
 			    <File
