@@ -45,5 +45,10 @@ namespace fenwick_tree_1
 		int n = sizeof(arr)/sizeof(arr[0]);
 		int* fenwick = (int*)malloc((n+1)*sizeof(int));
 		memset(fenwick, 0, sizeof(fenwick));
+
+		//test
+		int val = 10;
+		arr[7] += val;
+		update(fenwick, n, 7, 10);
 	}
 }

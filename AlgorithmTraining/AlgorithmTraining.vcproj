@@ -367,7 +367,16 @@
 			    <File
 				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.txt"
 				    >
-			    </File><File
+			    </File>
+				<File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d1.cpp"
+				    >
+			    </File>
+			    <File
+				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d1.h"
+				    >
+			    </File>
+				<File
 				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.cpp"
 				    >
 			    </File>
