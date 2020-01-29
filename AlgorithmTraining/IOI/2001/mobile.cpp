@@ -15,93 +15,59 @@
 using namespace System;
 using namespace std;
  
-namespace rods
+namespace mobile
 { 
-    int N;
-	int x1,y1,x2,y2;
-
-	int gridsize() { return 100; }
-
-	int rect(int x1, int y1, int x2, int y2 ) { return 0; }
-    
-	int firstV(int x, int y, int x1, int y1)
-	{
-		int b = x;
-		int e = x1;
-		int mid;
-		while (b != e)
-		{
-		    int mid = (b + e) / 2;
-            if (rect(x, y, mid, y1))
-               e = mid;
-			else
-               b = mid + 1;
-		}
-        return b + 1;
-	}
-
-	int lastV(int x, int y, int x1, int y1)
-	{
-		int b = x;
-		int e = x1;
-		int mid;
-		while (b != e) 
-		{
-            mid = (b + e) / 2 + 1;
-            if (rect(mid, y, x1, y1))
-				b = mid;
-			else 
-				e = mid - 1;
-		}
-		return b;
-	}
-
-	int firstH(int x, int y, int x1, int y1)
-	{
-		int b = y;
-		int e = y1;
-		int mid;
-		while (b != e)
-		{
-		    int mid = (b + e) / 2;
-            if (rect(x, y, x1, mid))
-               e = mid;
-			else
-               b = mid + 1;
-		}
-        return b + 1;
-	}
-    
-	int lastH(int x, int y, int x1, int y1)
-	{
-		int b = y;
-		int e = y1;
-		int mid;
-		while (b != e) 
-		{
-            mid = (b + e) / 2 + 1;
-            if (rect(x, mid, x1, y1))
-				b = mid;
-			else 
-				e = mid - 1;
-		}
-		return b;
-	}
-
-    void main()
-    {
-        N = gridsize();
-        int R = firstV(1, 1, N, N);
-        int R1 = lastV(1, 1, N, N);
-        int C = firstH(1, 1, N, N);
-        int C1 = lastH(1, 1, N, N);
-		if (rect(R, C, R, C)) 
-		{
-            if (rect(R + 1, C, R + 1, C))
-		    {
-                int d = lastV(R, C, R1-1, C);
-
-			}
-		}
-    }
+    const int MAXC = 1200;   
+   
+    int query, limit;   
+    int x1, y1, x2, y2, value;   
+    int T[MAXC][MAXC];   
+   
+    int lobit( int x ) { return x & -x; }   
+   
+    void update( int x, int y, int amount ) {   
+       for ( ; x <= limit; x += lobit( x ) )   
+          for ( int i = y; i <= limit; i += lobit( i ) )   
+             T[x][i] += amount;   
+    }   
+   
+    int sum( int x, int y ) {   
+       int sum = 0;   
+       for ( ; x > 0; x -= lobit( x ) )   
+          for ( int i = y; i > 0; i -= lobit( i ) )   
+             sum += T[x][i];   
+       return sum;   
+    }   
+   
+    int sum( int x1, int y1, int x2, int y2 ) {   
+       return sum( x2, y2 ) -   
+           sum( x1 - 1, y2 ) - sum( x2, y1 - 1 ) +   
+           sum( x1 - 1, y1 - 1 );   
+    }   
+   
+    int main() {   
+   
+        while ( query != 3 ) {   
+   
+           scanf( "%d", &query );   
+   
+           if ( query == 0 )   
+              scanf( "%d", &limit );   
+   
+           if ( query == 1 ) {   
+              scanf( "%d %d %d", &x1, &y1, &value );   
+              x1++; y1++;   
+              update( x1, y1, value );   
+           }   
+   
+           if ( query == 2 ) {   
+              scanf( "%d %d %d %d", &x1, &y1, &x2, &y2 );   
+              x1++; y1++;   
+              x2++; y2++;   
+              printf( "%d\n", sum( x1, y1, x2, y2 ) );   
+           }   
+       }   
+  
+       return 0;   
+   }   
 }
