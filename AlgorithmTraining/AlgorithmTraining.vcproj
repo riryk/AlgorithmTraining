@@ -556,6 +556,14 @@
 				    RelativePath=".\IOI\2001\mobile.h"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2001\iowari.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2001\iowari.h"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2010"
