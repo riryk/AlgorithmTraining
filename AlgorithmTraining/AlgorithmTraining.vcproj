@@ -564,6 +564,26 @@
 				    RelativePath=".\IOI\2001\iowari.h"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2001\twofive.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2001\twofive1.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2001\twofive.h"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2001\score.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2001\score.h"
+				>
+				</File>
 			</Filter>
 			<Filter
 			    Name="2010"
