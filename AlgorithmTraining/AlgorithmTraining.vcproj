@@ -1005,6 +1005,22 @@
 				>
 			    </File>
 			</Filter>
+			<Filter
+			    Name="2011"
+			    >
+				<File
+				    RelativePath=".\IOI\2011\crocodile_graph.cpp"
+				>
+				</File>
+			    <File
+				    RelativePath=".\IOI\2011\crocodile_tree.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2011\crocodile.h"
+				>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Greedy"
