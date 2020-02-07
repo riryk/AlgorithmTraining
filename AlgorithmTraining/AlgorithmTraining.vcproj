@@ -1020,6 +1020,14 @@
 				    RelativePath=".\IOI\2011\crocodile.h"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2011\ricehub.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2011\ricehub.h"
+				>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
