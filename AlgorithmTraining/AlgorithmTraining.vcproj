@@ -1033,6 +1033,10 @@
 				>
 				</File>
 				<File
+				    RelativePath=".\IOI\2011\garden1.cpp"
+				>
+				</File>
+				<File
 				    RelativePath=".\IOI\2011\garden.h"
 				>
 				</File>
