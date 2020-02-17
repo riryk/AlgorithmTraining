@@ -1040,6 +1040,14 @@
 				    RelativePath=".\IOI\2011\garden.h"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2011\race.cpp"
+				>
+				</File>
+				<File
+				    RelativePath=".\IOI\2011\race.h"
+				>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
