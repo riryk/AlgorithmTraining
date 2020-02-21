@@ -97,6 +97,23 @@ namespace race
     void dfs_calculate_min_path(int current, int parent, int current_cost, int current_length)
 	{
 		if (current_cost > K) return;
+        
+		if (achievable[current_cost] == book_keeping)
+		{
+			int new_cost = current_cost + minimum_paths[K - current_cost];
+            if (new_cost < global_answer || global_answer == -1)
+			{
+				global_answer = new_cost;
+			}
+		}
+ 
+        if (current_cost == K)
+		{
+            if (current_cost < global_answer || global_answer == -1)
+			{
+				global_answer = current_cost;
+			}
+		}
 
         for (int i = 0; i < neighbours[split_node].size(); i++)
 		{
@@ -128,6 +145,15 @@ namespace race
                 dfs_calculate_path(child, split_node, len_to_child, 1);
 				dfs_calculate_min_path(child, split_node, len_to_child, 1);
 			}
+		}
+
+		int local_split_node = split_node;
+        processed[split_node] = 1; 
+
+        for (int i = 0; i < (int)neighbours[local_split_node].size(); i++)
+		{
+           if (!processed[neighbours[local_split_node][i].first])
+              process(neighbours[local_split_node][i].first);
 		}
 	}
 
