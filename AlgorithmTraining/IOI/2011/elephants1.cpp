@@ -61,14 +61,101 @@ namespace elephants1
  		    }
 		}
 	}
+   
+	void ins(int grp, int val)
+	{
+		int i;
+		pos[grp][n[grp]++] = val;
+		for (i = n[grp]-1; i; i--)
+		{
+			if (pos[grp][i] <= pos[grp][i + 1]) break;
+			swap(pos[grp][i], pos[grp][i + 1]);
+		}
+	}
+
+	void del(int grp, int val)
+	{
+		int i, f;
+		f = 0;
+		for (i = 0; i < n[grp] - 1; i++)
+		{
+            if (pos[grp][i] == val)
+			{
+				f = 1;
+				swap(pos[grp][i], pos[grp][i + 1]);
+			}
+		}
+		if (pos[grp][i] == val) f = 1;
+		if (!f) n[grp]/=0;
+		--n[grp];
+	}
+	 
+	void update(int k, int move)
+	{
+        int i;
+		for (i = 0; i < G; i++)
+		{
+			if (!n[i]) continue;
+            if (A[k] >= pos[i][0] && A[k] <= pos[i][n[i]-1]) break;
+		}
+
+		del(i, A[k]);
+		rec(i);
+
+		while (G && !n[G-1]) --G;
+
+        for (i = 0; i < G; i++)
+		{
+			if (!n[i]) continue;
+            if (move <= pos[i][n[i]-1]) break;
+		}
+
+        i = min(i, G-1);
+		ins(i, move);
+		rec(i);
+
+		A[k] = move;
+	}
+    
+    int query()
+	{
+		int prev = -1;
+		int i;
+		int tot = 0;
+		int k;
+        for (int i = 0; i < G; i++)
+		{
+            if (!n[i]) continue;
+            k = upper_bound(pos[i], pos[i] + n[i], prev) - pos[i];
+			if (k >= n[i]) continue;
+            tot += cam[i][k];
+			prev = end[i][k];
+		}
+		return tot;
+	}
 
 	void main()
 	{
+		int res, move, i;
         scanf("%d%d%d",&N,&L,&Q);
 	    for (int i = 0; i < N; ++i) {
 		    scanf("%d",&A[i]);
 	    }
 
 		init();
+
+		res = 0;
+		for (int q = 0; q < Q; ++q)
+		{
+            scanf("%d%d", &i, &move);
+			update(i, move);
+            printf("%d\n",query());
+		    ++res;
+			if (res*res >= Q) 
+			{
+			    res = 0;
+			    init();
+		    }
+		}
 	}
 }
