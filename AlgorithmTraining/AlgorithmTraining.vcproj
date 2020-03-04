@@ -1061,6 +1061,18 @@
 				>
 				</File>
 			</Filter>
+			<Filter
+			    Name="2012"
+			    >
+				<File
+				    RelativePath=".\IOI\2012\rings.cpp"
+				>
+				</File>
+			    <File
+				    RelativePath=".\IOI\2012\rings.h"
+				>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Greedy"
