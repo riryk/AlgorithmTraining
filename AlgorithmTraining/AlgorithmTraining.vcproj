@@ -1072,6 +1072,14 @@
 				    RelativePath=".\IOI\2012\rings.h"
 				>
 				</File>
+				<File
+				    RelativePath=".\IOI\2012\crayfish.cpp"
+				>
+				</File>
+			    <File
+				    RelativePath=".\IOI\2012\crayfish.h"
+				>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
