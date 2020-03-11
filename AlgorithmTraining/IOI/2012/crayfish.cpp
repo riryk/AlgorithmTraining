@@ -39,13 +39,6 @@ namespace crayfish
         it++;
 	}
 
-	char get_letter(int p) { // O(sqrt(height))
-  int i = act;
-  while(H[ dadH[i] ] > P) i = dadH[i];// O(sqrt(height))
-  while(H[ dad[i] ] >= P) i = dad[i]; // O(sqrt(height))
-  return T[i];
-}
-
 	void solve()
 	{
         init();

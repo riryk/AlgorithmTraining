@@ -2,14 +2,15 @@
 #include <vector>  
 #include <errno.h>
 #include <math.h>  
-#include "IOI/2012/crayfish.h"
+#include "IOI/2012/city.h"
+
 
 using namespace System;
 using namespace std;
-using namespace crayfish;
+using namespace city;
 
 int main(array<System::String ^> ^args)
 {
-	solve();
+	test();
     return 0;
 }
