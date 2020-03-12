@@ -19,19 +19,66 @@ using namespace std;
  
 namespace city
 { 
+	#define MOD 1000000000
 	#define MAX_VL (8)
 
 	typedef long long int lld;
     typedef pair<int, int> pii;
     typedef pair<int, pii> triple;
     
+    struct node
+	{
+		int weight;
+		int index;
+		node* parent;
+		vector<node*> children;
+	}
+
+	typedef node;
+
+	node* root_h, root_v;
+
 	int list_h[100050];
+    int list_v[100050];
+    int tree_indexes;
+
     triple positions_x[100050];
     triple positions_y[100050];
 	map<lld, int> positions;
 
 	vector<int> graph[100050];
 	int weight[100050];
+    int visited[100050];
+	lld sum[100050];
+
+    void dfs(node *cur, int vertex)
+	{
+		cur->weight = weight[vertex];
+		cur->index = tree_indexes++;
+		visited[vertex] = 1;
+		for (int i = 0; i < (int)graph[vertex].size(); i++)
+		{
+			int c = graph[vertex][i];
+			if (!visited[c])
+			{
+                node *child = new node();
+				child->parent = cur;
+				cur->children.push_back(child);
+				dfs(child, c);
+			}
+		}
+	}
+
+    void calc_sum(node* cur)
+	{
+		int s = cur->weight;
+		for (int i = 0; i < (int)cur->children.size(); i++)
+		{
+			calc_sum(cur->children[i]);
+			s += sum[cur->children[i]->index];
+		}
+		sum[cur->index] = s;
+	}
 
     int distanceSum(int n, int* x, int *y)
     {
@@ -89,7 +136,24 @@ namespace city
 			}
 		}
 
-		return 1;
+		tree_indexes = 0;
+		root_h = new node();
+        memset(visited, 0, sizeof(visited));
+
+		dfs(root_h, 0);
+
+		memset(sum, 0, sizeof(sum));
+		calc_sum(root_h);
+
+		lld tsum = sum[0];
+		lld ans = 0;
+
+		for (int i = 1; i < tree_indexes; i++)
+		{
+            ans += (sum[i] * (tsum - sum[i])) % MOD;
+		}
+
+		return ans;
     }
 
 	void test()
