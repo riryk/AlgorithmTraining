@@ -47,7 +47,7 @@ HashMap implementation: https://medium.com/@aozturk/simple-hash-map-hash-table-i
 UOI
 https://oi.in.ua/category/uoi/ioi-sel/
 https://matholymp.org.ua/contests/types/olympiads/informatics/
-
+https://contests.oi.in.ua/
 
 
 

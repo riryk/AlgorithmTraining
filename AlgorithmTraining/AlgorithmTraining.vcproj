@@ -1065,6 +1065,14 @@
 			    Name="2012"
 			    >
 				<File
+				    RelativePath=".\IOI\2012\tournament.cpp"
+				>
+				</File>
+			    <File
+				    RelativePath=".\IOI\2012\tournament.h"
+				>
+				</File>
+				<File
 				    RelativePath=".\IOI\2012\city.cpp"
 				>
 				</File>
