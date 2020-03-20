@@ -1089,6 +1089,14 @@
 				>
 				</File>
 				<File
+				    RelativePath=".\IOI\2012\supper.cpp"
+				>
+				</File>
+			    <File
+				    RelativePath=".\IOI\2012\supper.h"
+				>
+				</File>
+				<File
 				    RelativePath=".\IOI\2012\crayfish.cpp"
 				>
 				</File>

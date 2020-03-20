@@ -2,11 +2,11 @@
 #include <vector>  
 #include <errno.h>
 #include <math.h>  
-#include "IOI/2012/tournament.h"
+#include "IOI/2012/supper.h"
 
 using namespace System;
 using namespace std;
-using namespace tournament;
+using namespace supper;
 
 int main(array<System::String ^> ^args)
 {
