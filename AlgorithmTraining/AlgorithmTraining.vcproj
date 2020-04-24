@@ -44,7 +44,7 @@
 				Optimization="0"
 				PreprocessorDefinitions="WIN32;_DEBUG"
 				RuntimeLibrary="3"
-				UsePrecompiledHeader="2"
+				UsePrecompiledHeader="0"
 				WarningLevel="3"
 				DebugInformationFormat="3"
 			/>
@@ -238,7 +238,7 @@
 				>
 			</File>
 		</Filter>
-		<Filter
+		<!--<Filter
 			Name="BipartiteMatching"
 			>
 			<File
@@ -346,93 +346,85 @@
 				</File>
 			</Filter>
 			<Filter
-			    Name="FenwickTree"
-			    >
-			    <File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.cpp"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.h"
-				    >
-			    </File>
+				Name="FenwickTree"
+				>
 				<File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree1.cpp"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree1.h"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree.txt"
-				    >
-			    </File>
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree.cpp"
+					>
+				</File>
 				<File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d1.cpp"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d1.h"
-				    >
-			    </File>
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree.h"
+					>
+				</File>
 				<File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.cpp"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.h"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.txt"
-				    >
-			    </File>
-		     </Filter>
-			 <Filter
-			    Name="SegmentTree"
-			    >
-			    <File
-				    RelativePath=".\DataStructures\SegmentTree\segment_tree.cpp"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\SegmentTree\segment_tree.h"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\SegmentTree\segment_tree.txt"
-				    >
-			    </File>
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree.txt"
+					>
+				</File>
 				<File
-				    RelativePath=".\DataStructures\SegmentTree\segment_tree1.cpp"
-				    >
-			    </File>
-			    <File
-				    RelativePath=".\DataStructures\SegmentTree\segment_tree1.txt"
-				    >
-			    </File>
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree1.cpp"
+					>
+				</File>
 				<File
-				    RelativePath=".\DataStructures\SegmentTree\segment_tree_lazy.cpp"
-				    >
-			    </File>
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree1.h"
+					>
+				</File>
 				<File
-				    RelativePath=".\DataStructures\SegmentTree\segment_tree_lazy.txt"
-				    >
-			    </File>
-		     </Filter>
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.h"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d1.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\FenwickTree\fenwick_tree2d1.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="SegmentTree"
+				>
+				<File
+					RelativePath=".\DataStructures\SegmentTree\segment_tree.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\SegmentTree\segment_tree.h"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\SegmentTree\segment_tree.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\SegmentTree\segment_tree1.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\SegmentTree\segment_tree1.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\SegmentTree\segment_tree_lazy.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\DataStructures\SegmentTree\segment_tree_lazy.txt"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="Dfs"
 			>
-			<File
-				RelativePath=".\Dfs\dfs_adjacency_matrix.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\Dfs\dfs_adjacency_matrix.h"
-				>
-			</File>
 			<File
 				RelativePath=".\Dfs\dfs_adjacency_list.cpp"
 				>
@@ -441,672 +433,692 @@
 				RelativePath=".\Dfs\dfs_adjacency_list.h"
 				>
 			</File>
+			<File
+				RelativePath=".\Dfs\dfs_adjacency_matrix.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\Dfs\dfs_adjacency_matrix.h"
+				>
+			</File>
 		</Filter>
 		<Filter
 			Name="Arrays"
 			>
 			<Filter
-			    Name="dp"
-			    >
-			    <File
-				    RelativePath=".\Arrays\dp\Leet62.cpp"
+				Name="dp"
 				>
-			    </File>
 				<File
-				    RelativePath=".\Arrays\dp\Leet62.h"
-				>
-			    </File>
+					RelativePath=".\Arrays\dp\Leet62.cpp"
+					>
+				</File>
 				<File
-				    RelativePath=".\Arrays\dp\Leet62.txt"
-				>
-			    </File>
+					RelativePath=".\Arrays\dp\Leet62.h"
+					>
+				</File>
+				<File
+					RelativePath=".\Arrays\dp\Leet62.txt"
+					>
+				</File>
 			</Filter>
-		</Filter>
+		</Filter>-->
 		<Filter
 			Name="IOI"
 			>
-			<Filter
-			    Name="2005"
-			    >
-			    <File
-				    RelativePath=".\IOI\2005\garden.cpp"
+			<!--<Filter
+				Name="2005"
 				>
+				<File
+					RelativePath=".\IOI\2005\birthday.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\garden.h"
-				>
+					RelativePath=".\IOI\2005\birthday.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\garden.txt"
-				>
+					RelativePath=".\IOI\2005\birthday.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\birthday.cpp"
-				>
+					RelativePath=".\IOI\2005\garden.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\birthday.h"
-				>
+					RelativePath=".\IOI\2005\garden.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\birthday.txt"
-				>
+					RelativePath=".\IOI\2005\garden.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\mountains.cpp"
-				>
+					RelativePath=".\IOI\2005\mountains.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\mountains.h"
-				>
+					RelativePath=".\IOI\2005\mountains.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\mountains.txt"
-				>
+					RelativePath=".\IOI\2005\mountains.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\rivers.cpp"
-				>
+					RelativePath=".\IOI\2005\rivers.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\rivers.h"
-				>
+					RelativePath=".\IOI\2005\rivers.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2005\rivers.txt"
-				>
-				</File>
-			</Filter>
-			<Filter
-			    Name="2006"
-			    >
-			    <File
-				    RelativePath=".\IOI\2006\pyramid.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2006\pyramid.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2006\pyramid.txt"
-				>
+					RelativePath=".\IOI\2005\rivers.txt"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2002"
-			    >
-			    <File
-				    RelativePath=".\IOI\2002\rods.cpp"
+				Name="2006"
 				>
+				<File
+					RelativePath=".\IOI\2006\pyramid.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2002\rods.h"
-				>
+					RelativePath=".\IOI\2006\pyramid.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2002\bus.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2002\bus.h"
-				>
+					RelativePath=".\IOI\2006\pyramid.txt"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2001"
-			    >
-			    <File
-				    RelativePath=".\IOI\2001\mobile.cpp"
+				Name="2002"
 				>
+				<File
+					RelativePath=".\IOI\2002\bus.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2001\mobile.h"
-				>
+					RelativePath=".\IOI\2002\bus.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2001\iowari.cpp"
-				>
+					RelativePath=".\IOI\2002\rods.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2001\iowari.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2001\twofive.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2001\twofive1.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2001\twofive.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2001\score.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2001\score.h"
-				>
+					RelativePath=".\IOI\2002\rods.h"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2010"
-			    >
-			    <File
-				    RelativePath=".\IOI\2010\language.cpp"
+				Name="2001"
 				>
+				<File
+					RelativePath=".\IOI\2001\iowari.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2010\language.h"
-				>
+					RelativePath=".\IOI\2001\iowari.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2010\traffic.cpp"
-				>
+					RelativePath=".\IOI\2001\mobile.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2010\traffic.h"
-				>
+					RelativePath=".\IOI\2001\mobile.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2010\saveit.cpp"
-				>
+					RelativePath=".\IOI\2001\score.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2010\saveit.h"
-				>
-				</File>
-			</Filter>
-			<Filter
-			    Name="2003"
-			    >
-			    <File
-				    RelativePath=".\IOI\2003\maintenance.cpp"
-				>
+					RelativePath=".\IOI\2001\score.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2003\maintenance.h"
-				>
+					RelativePath=".\IOI\2001\twofive.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2003\maintenance.txt"
-				>
+					RelativePath=".\IOI\2001\twofive.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2003\robots.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2003\robots.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2003\robots.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2003\boundary.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2003\boundary.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2003\boundary.txt"
-				>
+					RelativePath=".\IOI\2001\twofive1.cpp"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2004"
-			    >
-			    <File
-				    RelativePath=".\IOI\2004\artemis.cpp"
+				Name="2010"
 				>
+				<File
+					RelativePath=".\IOI\2010\language.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2004\artemis.h"
-				>
+					RelativePath=".\IOI\2010\language.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2004\artemis.txt"
-				>
+					RelativePath=".\IOI\2010\saveit.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2004\hermes.cpp"
-				>
+					RelativePath=".\IOI\2010\saveit.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2004\hermes.h"
-				>
+					RelativePath=".\IOI\2010\traffic.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2004\hermes.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2004\empodia1.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2004\empodia.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2004\empodia.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2004\empodia.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2004\phidias.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2004\phidias.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2004\phidias.txt"
-				>
+					RelativePath=".\IOI\2010\traffic.h"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2009"
-			    >
-			    <File
-				    RelativePath=".\IOI\2009\hill.cpp"
+				Name="2003"
 				>
+				<File
+					RelativePath=".\IOI\2003\boundary.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\hill.h"
-				>
+					RelativePath=".\IOI\2003\boundary.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\hill.txt"
-				>
+					RelativePath=".\IOI\2003\boundary.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\museum.cpp"
-				>
+					RelativePath=".\IOI\2003\maintenance.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\museum.h"
-				>
+					RelativePath=".\IOI\2003\maintenance.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\museum.txt"
-				>
+					RelativePath=".\IOI\2003\maintenance.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\hiring.cpp"
-				>
+					RelativePath=".\IOI\2003\robots.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\hiring.h"
-				>
+					RelativePath=".\IOI\2003\robots.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2009\hiring.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\raisins.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\raisins.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\raisins.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\garage.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\garage.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\garage.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\mecho.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\mecho.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\mecho.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\regions.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\regions1.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\regions.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\regions.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\salesman.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\salesman.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2009\salesman.txt"
-				>
+					RelativePath=".\IOI\2003\robots.txt"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2008"
-			    >
-			    <File
-				    RelativePath=".\IOI\2008\type_printer.cpp"
+				Name="2004"
 				>
+				<File
+					RelativePath=".\IOI\2004\artemis.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\type_printer.h"
-				>
+					RelativePath=".\IOI\2004\artemis.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\type_printer.txt"
-				>
+					RelativePath=".\IOI\2004\artemis.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\islands.cpp"
-				>
+					RelativePath=".\IOI\2004\empodia.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\islands.h"
-				>
+					RelativePath=".\IOI\2004\empodia.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\islands.txt"
-				>
+					RelativePath=".\IOI\2004\empodia.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\fish.cpp"
-				>
+					RelativePath=".\IOI\2004\empodia1.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\fish1.cpp"
-				>
+					RelativePath=".\IOI\2004\hermes.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\fish.h"
-				>
+					RelativePath=".\IOI\2004\hermes.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\fish.txt"
-				>
+					RelativePath=".\IOI\2004\hermes.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\linear_garden.cpp"
-				>
+					RelativePath=".\IOI\2004\phidias.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\linear_garden.h"
-				>
+					RelativePath=".\IOI\2004\phidias.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2008\linear_garden.txt"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2008\teleporters.cpp"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2008\teleporters.h"
-				>
-				</File>
-				<File
-				    RelativePath=".\IOI\2008\teleporters.txt"
-				>
+					RelativePath=".\IOI\2004\phidias.txt"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2007"
-			    >
-			    <File
-				    RelativePath=".\IOI\2007\aliens.cpp"
+				Name="2009"
 				>
-			    </File>
 				<File
-				    RelativePath=".\IOI\2007\aliens.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\aliens.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\chip.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\chip.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\chip.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\fish.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\fish.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\fish.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\robot.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\robot.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\robot.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\flood.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\flood.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\flood.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\training.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\training.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\training.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\pairs.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\pairs.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\pairs.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\sails.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\sails1.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\sails.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\sails.h"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\miners.txt"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\miners.cpp"
-				>
-			    </File>
-				<File
-				    RelativePath=".\IOI\2007\miners.h"
-				>
-			    </File>
-			</Filter>
-			<Filter
-			    Name="2011"
-			    >
-				<File
-				    RelativePath=".\IOI\2011\crocodile_graph.cpp"
-				>
-				</File>
-			    <File
-				    RelativePath=".\IOI\2011\crocodile_tree.cpp"
-				>
+					RelativePath=".\IOI\2009\garage.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\crocodile.h"
-				>
+					RelativePath=".\IOI\2009\garage.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\ricehub.cpp"
-				>
+					RelativePath=".\IOI\2009\garage.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\ricehub.h"
-				>
+					RelativePath=".\IOI\2009\hill.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\garden.cpp"
-				>
+					RelativePath=".\IOI\2009\hill.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\garden1.cpp"
-				>
+					RelativePath=".\IOI\2009\hill.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\garden.h"
-				>
+					RelativePath=".\IOI\2009\hiring.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\race.cpp"
-				>
+					RelativePath=".\IOI\2009\hiring.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\race.h"
-				>
+					RelativePath=".\IOI\2009\hiring.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\elephants1.cpp"
-				>
+					RelativePath=".\IOI\2009\mecho.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\elephants.cpp"
-				>
+					RelativePath=".\IOI\2009\mecho.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2011\elephants.h"
-				>
+					RelativePath=".\IOI\2009\mecho.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\museum.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\museum.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\museum.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\raisins.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\raisins.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\raisins.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\regions.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\regions.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\regions.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\regions1.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\salesman.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\salesman.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\salesman.txt"
+					>
 				</File>
 			</Filter>
 			<Filter
-			    Name="2012"
-			    >
+				Name="2008"
+				>
 				<File
-				    RelativePath=".\IOI\2012\tournament.cpp"
-				>
-				</File>
-			    <File
-				    RelativePath=".\IOI\2012\tournament.h"
-				>
+					RelativePath=".\IOI\2008\fish.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2012\city.cpp"
-				>
-				</File>
-			    <File
-				    RelativePath=".\IOI\2012\city.h"
-				>
+					RelativePath=".\IOI\2008\fish.h"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2012\rings.cpp"
-				>
-				</File>
-			    <File
-				    RelativePath=".\IOI\2012\rings.h"
-				>
+					RelativePath=".\IOI\2008\fish.txt"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2012\supper.cpp"
-				>
-				</File>
-			    <File
-				    RelativePath=".\IOI\2012\supper.h"
-				>
+					RelativePath=".\IOI\2008\fish1.cpp"
+					>
 				</File>
 				<File
-				    RelativePath=".\IOI\2012\crayfish.cpp"
-				>
+					RelativePath=".\IOI\2008\islands.cpp"
+					>
 				</File>
-			    <File
-				    RelativePath=".\IOI\2012\crayfish.h"
+				<File
+					RelativePath=".\IOI\2008\islands.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\islands.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\linear_garden.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\linear_garden.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\linear_garden.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\teleporters.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\teleporters.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\teleporters.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\type_printer.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\type_printer.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2008\type_printer.txt"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="2007"
 				>
+				<File
+					RelativePath=".\IOI\2007\aliens.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\aliens.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\aliens.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\chip.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\chip.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\chip.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\fish.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\fish.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\fish.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\flood.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\flood.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\flood.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\miners.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\miners.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\miners.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\pairs.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\pairs.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\pairs.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\robot.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\robot.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\robot.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\sails.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\sails.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\sails.txt"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\sails1.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\training.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\training.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2007\training.txt"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="2011"
+				>
+				<File
+					RelativePath=".\IOI\2011\crocodile.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\crocodile_graph.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\crocodile_tree.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\elephants.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\elephants.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\elephants1.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\garden.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\garden.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\garden1.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\race.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\race.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\ricehub.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2011\ricehub.h"
+					>
+				</File>
+			</Filter>-->
+			<Filter
+				Name="2012"
+				>
+				<File
+					RelativePath=".\IOI\2012\city.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\city.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\crayfish.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\crayfish.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\rings.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\rings.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\supper.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\supper.h"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\tournament.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2012\tournament.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="2013"
+				>
+				<File
+					RelativePath=".\IOI\2013\dreaming.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2013\dreaming.h"
+					>
 				</File>
 			</Filter>
 		</Filter>
-		<Filter
+		<!--<Filter
 			Name="Greedy"
 			>
 			<File
@@ -1126,11 +1138,7 @@
 			Name="GraphCycle"
 			>
 			<File
-				RelativePath=".\GraphCycle\graph_cycle_naive.cpp"
-				>
-			</File>
-			<File
-				RelativePath=".\GraphCycle\graph_cycle_rank.cpp"
+				RelativePath=".\GraphCycle\graph_cycle.cpp"
 				>
 			</File>
 			<File
@@ -1138,11 +1146,15 @@
 				>
 			</File>
 			<File
-				RelativePath=".\GraphCycle\graph_cycle.cpp"
+				RelativePath=".\GraphCycle\graph_cycle_fast.cpp"
 				>
 			</File>
 			<File
-				RelativePath=".\GraphCycle\graph_cycle_fast.cpp"
+				RelativePath=".\GraphCycle\graph_cycle_naive.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\GraphCycle\graph_cycle_rank.cpp"
 				>
 			</File>
 		</Filter>
@@ -1185,7 +1197,7 @@
 				RelativePath=".\Dp\Leet879.txt"
 				>
 			</File>
-		</Filter>
+		</Filter>-->
 		<File
 			RelativePath=".\ReadMe.txt"
 			>
