@@ -44,6 +44,14 @@ https://polycode.livejournal.com/29426.html Microsoft question.
 HashMap implementation: https://medium.com/@aozturk/simple-hash-map-hash-table-implementation-in-c-931965904250
 
 
+DP:
+Knuth optimization
+Convex hull optimization 
+https://acmicpc.tistory.com/55
+IOI 2013 wombats:  https://blog.myungwoo.kr/9?category=516568
+
+
+
 UOI
 https://oi.in.ua/category/uoi/ioi-sel/
 https://matholymp.org.ua/contests/types/olympiads/informatics/

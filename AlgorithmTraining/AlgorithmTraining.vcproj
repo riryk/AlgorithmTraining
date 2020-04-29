@@ -1116,6 +1116,14 @@
 					RelativePath=".\IOI\2013\dreaming.h"
 					>
 				</File>
+				<File
+					RelativePath=".\IOI\2013\wombats.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2013\wombats.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<!--<Filter
