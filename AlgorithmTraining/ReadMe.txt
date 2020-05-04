@@ -76,6 +76,8 @@ Old IOI problems: https://github.com/mukel/ProgrammingContests/tree/master/OldSt
 
 web site with solutions to IOI https://github.com/mostafa-saad/MyCompetitiveProgramming/tree/master/Olympiad/IOI/official/2003  
 
+Blog: https://blog.myungwoo.kr/category/IOI/IOI2013
+
 
 
 ACM-ICPC: 
