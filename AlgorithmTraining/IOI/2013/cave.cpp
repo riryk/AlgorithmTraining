@@ -35,14 +35,27 @@ namespace cave
         for (int i = start; i <= end; i++) S[i] ^= 1;
 	}
 
+	int dfs(int s, int e)
+	{
+		if (s == e) 
+			return s;
+
+	   	int mid = (s+e)>>1;
+        revert(S, s, mid); 
+        int door = tryCombination(S); 
+        if (door != 0)
+			return dfs(s, mid);
+		return dfs(mid + 1, e);
+	}
+
     void exploreCave(int n)
 	{
         N = n;
 		int first = tryCombination(S);
-		if (first != 0)
-		{
-            for (int i = 0; i < N; i++) S[i] ^= 1;
-		}
+		if (first != 0) 
+			revert(S, 0, n-1);
+        first = tryCombination(S);
+		int sw = dfs(0, n-1);
 	}
 
 	void test()
