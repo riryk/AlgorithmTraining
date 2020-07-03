@@ -1132,6 +1132,14 @@
 					RelativePath=".\IOI\2013\cave.h"
 					>
 				</File>
+				<File
+					RelativePath=".\IOI\2013\robots.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2013\robots.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<!--<Filter

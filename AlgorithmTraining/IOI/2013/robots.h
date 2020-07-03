@@ -1,7 +1,7 @@
-#ifndef ioi_2013_cave_h
-#define ioi_2013_cave_h
+#ifndef ioi_2013_robots_h
+#define ioi_2013_robots_h
 
-namespace cave
+namespace robots
 {
 	void test();
 }
