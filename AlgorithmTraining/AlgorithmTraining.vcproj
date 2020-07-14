@@ -1140,6 +1140,14 @@
 					RelativePath=".\IOI\2013\robots.h"
 					>
 				</File>
+				<File
+					RelativePath=".\IOI\2013\game.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2013\game.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<!--<Filter

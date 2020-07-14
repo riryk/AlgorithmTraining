@@ -28,10 +28,6 @@ namespace robots
 		b = B1;
 		t = T1;
 
-        for (int i = 0; i < a; i++) X[i] = X1[i];
-        for (int i = 0; i < b; i++) Y[i] = Y1[i];
-        
-
 		return 1;
 	}
 
