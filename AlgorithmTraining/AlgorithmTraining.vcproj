@@ -1149,6 +1149,18 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="2014"
+				>
+				<File
+					RelativePath=".\IOI\2014\gondola.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2014\gondola.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<!--<Filter
 			Name="Greedy"
