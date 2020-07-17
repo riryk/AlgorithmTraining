@@ -102,6 +102,8 @@ https://github.com/Diusrex/UVA-Solutions
 
 
 Google code jam solutions:  https://www.go-hero.net/jam/16/
+Competetive Programming algorithms: https://cp-algorithms.com/
+
 
 
 

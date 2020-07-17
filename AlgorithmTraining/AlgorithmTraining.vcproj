@@ -1160,6 +1160,14 @@
 					RelativePath=".\IOI\2014\gondola.h"
 					>
 				</File>
+				<File
+					RelativePath=".\IOI\2014\segment_tree_lazy.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2014\segment_tree_lazy.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<!--<Filter
