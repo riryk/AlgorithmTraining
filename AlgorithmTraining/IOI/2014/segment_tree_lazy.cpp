@@ -34,9 +34,36 @@ namespace segment_tree_lazy
 	   tree[node] = tree[2*node + 1] + tree[2*node + 2];
    }
 
+   void update_internal(int arr[], int node, int idx, int val, int start, int end)
+   {
+       if (start == end)
+	   {
+		   arr[idx] += val;
+		   tree[node] += val;
+		   return;
+	   }
+
+       int mid = (start + end) >> 1;
+	   if (idx <= mid)
+	   {
+           update_internal(arr, 2*node + 1, idx, val, start, mid);
+	   }
+	   else
+	   {
+           update_internal(arr, 2*node + 2, idx, val, mid + 1, end);
+	   }
+
+	   tree[node] = tree[2*node + 1] + tree[2*node + 2];
+   }
+
    void build(int arr[], int n)
    {
 	   build_internal(arr, 0, 0, n-1);
+   }
+
+   void update(int arr[], int n, int idx, int val)
+   {
+	   update_internal(arr, 0, idx, val, 0, n - 1);
    }
 }
 
