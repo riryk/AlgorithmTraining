@@ -65,5 +65,48 @@ namespace segment_tree_lazy
    {
 	   update_internal(arr, 0, idx, val, 0, n - 1);
    }
+
+   int query(int arr[], int node, int start, int end, int l, int e)
+   {
+       if (start > e || end < l)
+	   {
+		   return 0;
+	   } 
+
+       if (start >= l && end <= e)
+	   {
+           return tree[node];
+	   }
+
+       int mid = (start + end) >> 1;
+
+       return query(arr, 2 * node + 1, start, mid, l, e) 
+		    + query(arr, 2 * node + 2, mid + 1, end, l, e);
+   }
+
+   void update_range_internal(int arr[], int start, int end, int node, int l, int r, int val)
+   {
+       if (start > end || end < l || start > r)
+	   {
+		   return;
+	   }
+
+	   if (start == end)
+	   {
+           tree[node] += val;
+	   }
+
+	   int mid = (start + end) >> 1;
+
+       update_range_internal(arr, start, mid, 2 * node + 1, l, r, val);
+       update_range_internal(arr, mid + 1, end, 2 * node + 2, l, r, val);
+
+       tree[node] = tree[2*node + 1] + tree[2*node + 2];
+   }
+
+   void update_range(int arr[], int n, int idx, int l, int r, int val)
+   {
+       update_range_internal(arr, 0, n - 1, idx, l, r, val);
+   }
 }
 
