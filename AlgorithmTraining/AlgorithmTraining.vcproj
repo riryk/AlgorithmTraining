@@ -1168,6 +1168,14 @@
 					RelativePath=".\IOI\2014\segment_tree_lazy.h"
 					>
 				</File>
+				<File
+					RelativePath=".\IOI\2014\wall.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2014\wall.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<!--<Filter

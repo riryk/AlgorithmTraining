@@ -1,7 +1,7 @@
-#ifndef ioi_2014_gondola_h
-#define ioi_2014_gondola_h
+#ifndef ioi_2014_wall_h
+#define ioi_2014_wall_h
 
-namespace gondola
+namespace wall
 {
 	void test();
 }

@@ -19,6 +19,7 @@ using namespace std;
 namespace segment_tree_lazy
 {
    int tree[1000];
+   int lazy[1000];
 
    void build_internal(int arr[], int node, int start, int end)
    {
@@ -104,9 +105,82 @@ namespace segment_tree_lazy
        tree[node] = tree[2*node + 1] + tree[2*node + 2];
    }
 
-   void update_range(int arr[], int n, int idx, int l, int r, int val)
+   void update_range(int arr[], int n, int node, int l, int r, int val)
    {
-       update_range_internal(arr, 0, n - 1, idx, l, r, val);
+       update_range_internal(arr, 0, n - 1, node, l, r, val);
+   }
+
+   void update_range_internal_lazy(int arr[], int start, int end, int node, int l, int r, int val)
+   {
+       if (lazy[node])
+	   {
+           tree[node] += (end - start + 1) * lazy[node];
+		   if (start != end)
+		   {
+               lazy[2*node+1] += lazy[node];
+               lazy[2*node+2] += lazy[node];
+		   }
+		   lazy[node] = 0;
+	   }
+       
+	   if (start > end || r < start || l > end)
+	   {
+		   return;
+	   }
+
+       if (l <= start && end <= r)
+	   {
+           tree[node] += (end - start + 1) * val;
+
+           if (start != end)
+		   {
+               lazy[2*node+1] += val;
+               lazy[2*node+2] += val;
+		   }
+
+		   return;
+	   }
+
+	   int mid = (start + end) >> 1; 
+      
+       update_range_internal_lazy(arr, start, mid, 2 * node + 1, l, r, val);
+       update_range_internal_lazy(arr, mid + 1, end, 2 * node + 2, l, r, val);
+
+       tree[node] = tree[2*node + 1] + tree[2*node + 2];
+   }
+
+   void update_range_lazy(int arr[], int n, int node, int l, int r, int val)
+   {
+       update_range_internal_lazy(arr, 0, n - 1, node, l, r, val);
+   }
+
+   int query_lazy(int arr[], int node, int start, int end, int l, int e)
+   {
+       if (start > end || start > e || end < l)
+	   {
+		   return 0;
+	   } 
+
+       if (lazy[node])
+	   {
+           tree[node] += (end - start + 1) * lazy[node];
+		   if (start != end)
+		   {
+               lazy[2*node+1] += lazy[node];
+               lazy[2*node+2] += lazy[node];
+		   }
+		   lazy[node] = 0;
+	   }	    
+
+       if (start >= l && end <= e)
+	   {
+           return tree[node];
+	   }
+
+       int mid = (start + end) >> 1;
+
+       return query(arr, 2 * node + 1, start, mid, l, e) 
+		    + query(arr, 2 * node + 2, mid + 1, end, l, e);
    }
 }
 
