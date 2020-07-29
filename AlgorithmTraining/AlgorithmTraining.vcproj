@@ -1176,6 +1176,14 @@
 					RelativePath=".\IOI\2014\wall.h"
 					>
 				</File>
+				<File
+					RelativePath=".\IOI\2014\holiday.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2014\holiday.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<!--<Filter
