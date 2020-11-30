@@ -1186,6 +1186,18 @@
 				</File>
 			</Filter>
 		</Filter>
+		<Filter
+		    Name="UVA"
+			>
+		    <Filter
+				Name="dp"
+				>
+				<File
+					RelativePath=".\UVA\dp\10898_combo_deal.cpp"
+					>
+				</File>
+			</Filter>
+		</Filter>
 		<!--<Filter
 			Name="Greedy"
 			>
