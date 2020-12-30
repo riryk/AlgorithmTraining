@@ -1185,6 +1185,22 @@
 					>
 				</File>
 			</Filter>
+			<Filter
+				Name="2016"
+				>
+				<File
+					RelativePath=".\IOI\2016\bug_small.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2016\bug.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2016\bug.h"
+					>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 		    Name="UVA"
