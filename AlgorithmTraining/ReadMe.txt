@@ -107,3 +107,9 @@ Competetive Programming algorithms: https://cp-algorithms.com/
 
 
 
+IOI Categories:
+DP - 2020 biscuits
+
+
+
+
