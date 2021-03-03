@@ -108,7 +108,16 @@ Competetive Programming algorithms: https://cp-algorithms.com/
 
 
 IOI Categories:
-DP - 2020 biscuits
+DP - 2020 biscuits, 2017 wiring
+
+blog = https://blog.myungwoo.kr/117
+asm - https://www.acmicpc.net/problem/1659
+blog = https://cubelover.tistory.com/8
+
+
+
+
+
 
 
 
