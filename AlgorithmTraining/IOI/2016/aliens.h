@@ -1,7 +1,7 @@
-#ifndef ioi_2016_bug_h
-#define ioi_2016_bug_h
+#ifndef ioi_2016_aliens_h
+#define ioi_2016_aliens_h
 
-namespace bug
+namespace aliens
 {
 	void test();
 }

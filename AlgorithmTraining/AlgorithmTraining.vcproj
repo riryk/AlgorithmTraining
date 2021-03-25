@@ -1200,6 +1200,14 @@
 					RelativePath=".\IOI\2016\bug.h"
 					>
 				</File>
+				<File
+					RelativePath=".\IOI\2016\aliens_knuth.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2016\aliens.h"
+					>
+				</File>
 			</Filter>
 		</Filter>
 		<Filter
