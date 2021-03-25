@@ -11,12 +11,12 @@
 #include <vector>
 #include <map>
 #include <utility>
-#include "wall.h"
+#include "bug.h"
 
 using namespace System;
 using namespace std;
  
-namespace wall
+namespace bug
 {
 	pair<int, int> segt[8000001];
 	pair<int, int> lazy[8000001];

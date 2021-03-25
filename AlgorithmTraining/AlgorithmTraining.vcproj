@@ -1205,6 +1205,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\IOI\2016\aliens_divide_and_conquer.cpp"
+					>
+				</File>
+				<File
 					RelativePath=".\IOI\2016\aliens.h"
 					>
 				</File>
