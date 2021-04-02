@@ -115,6 +115,10 @@ asm - https://www.acmicpc.net/problem/1659
 blog = https://cubelover.tistory.com/8
 
 
+ITMO - https://neerc.ifmo.ru/wiki/index.php?title=Convex_hull_trick
+
+
+
 
 
 
