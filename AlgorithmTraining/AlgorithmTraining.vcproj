@@ -1209,6 +1209,10 @@
 					>
 				</File>
 				<File
+					RelativePath=".\IOI\2016\aliens_convex_hull_trick.cpp"
+					>
+				</File>	
+				<File
 					RelativePath=".\IOI\2016\aliens.h"
 					>
 				</File>
