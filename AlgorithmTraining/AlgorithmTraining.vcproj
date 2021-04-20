@@ -716,11 +716,11 @@
 					RelativePath=".\IOI\2004\phidias.txt"
 					>
 				</File>
-			</Filter>
+			</Filter>-->
 			<Filter
 				Name="2009"
 				>
-				<File
+				<!--<File
 					RelativePath=".\IOI\2009\garage.cpp"
 					>
 				</File>
@@ -781,14 +781,6 @@
 					>
 				</File>
 				<File
-					RelativePath=".\IOI\2009\raisins.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2009\raisins.h"
-					>
-				</File>
-				<File
 					RelativePath=".\IOI\2009\raisins.txt"
 					>
 				</File>
@@ -819,9 +811,17 @@
 				<File
 					RelativePath=".\IOI\2009\salesman.txt"
 					>
+				</File>-->
+				<File
+					RelativePath=".\IOI\2009\raisins1.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\IOI\2009\raisins.h"
+					>
 				</File>
 			</Filter>
-			<Filter
+			<!--<Filter
 				Name="2008"
 				>
 				<File
