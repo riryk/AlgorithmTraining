@@ -1,0 +1,44 @@
+1. To clear/turn off the j-th item of the set,
+   use8 the bitwise AND operation S &= ~(1 << j).
+   S = 42 (base 10) = 101010 (base 2)
+   j = 1, ~(1 << j) = 111101 <- ‘~’ is the bitwise NOT operation
+   -------- AND
+   S = 40 (base 10) = 101000 (base 2) // update S to this new value 40
+   
+2. To toggle (flip the status of) the j-th item of the set,
+   use the bitwise XOR operation S ∧= (1 << j).
+   S = 40 (base 10) = 101000 (base 2)
+    j = 2, (1 << j) = 000100 <- bit ‘1’ is shifted to the left 2 times
+                     -------- XOR <- true if both bits are different
+   S = 44 (base 10) = 101100 (base 2) // update S to this new value 44   
+   
+3. To get the value of the least significant bit that is on (first from the right), use T = (S & (-S)).
+   S = 40 (base 10)  = 000...000101000 (32 bits, base 2)
+  -S = -40 (base 10) = 111...111011000 (two’s complement)
+                       ----------------- AND
+     T = 8 (base 10) = 000...000001000 (3rd bit from right is on)   
+
+  Two's complement is not a complicated scheme and is not well served by anything lengthly. 
+  Therefore, after this introduction, which explains what two's complement is and how to use it, there are mostly examples.
+  Two's complement is the way every computer I know of chooses to represent integers. 
+  To get the two's complement negative notation of an integer, you write out the number in binary. 
+  You then invert the digits, and add one to the result.
+  
+  Suppose we're working with 8 bit quantities (for simplicity's sake) 
+  and suppose we want to find how -28 would be expressed in two's complement notation. 
+  First we write out 28 in binary form.
+  
+  00011100  
+  
+  Then we invert the digits. 0 becomes 1, 1 becomes 0.
+  
+  11100011
+  
+  Then we add 1.
+
+  11100100
+  That is how one would write -28 in 8 bit binary.	 
+
+  
+  
+
