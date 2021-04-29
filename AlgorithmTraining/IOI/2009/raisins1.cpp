@@ -61,7 +61,7 @@ namespace raisins
 					   int i2 = i1 + d1;
                        int j2 = j1 + d2;
 					   for (int t = i1; t < i2; t++)
-                          dp[i1][j1][i2][j2] = min(dp[i1][j1][i2][j2], get(sum,i1,j1,i2,j2) + dp[i1][j1][t][j2] + dp[t+1][j1][i2][j2]);
+                          dp[i1][j1][i2][j2] = min(dp[i1][j1][i2][j2], get_sum(sum,i1,j1,i2,j2) + dp[i1][j1][t][j2] + dp[t+1][j1][i2][j2]);
 				   }
 
 		return 0;
