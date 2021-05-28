@@ -1,0 +1,227 @@
+
+1. THE VALLEY OF MEXICO 
+
+Mexico City is built in a beautiful valley known as the Valley of Mexico which, 
+years ago, was mostly a lake. 
+Around the year 1300, Aztec religious leaders decreed 
+that the lake’s center be filled in order to build the capital of their empire. 
+
+Today, the lake is completely covered.
+Before the Aztecs arrived, c cities were located around the lake on its shores. 
+Some of these cities established commercial agreements. 
+Goods were traded, using boats, between cities that had a commercial agreement. 
+It was possible to connect any two cities by a line segment through the lake. 
+
+Eventually, the kings of the cities decided to organize this commerce. 
+They designed a commerce route that connected every city around the lake. 
+The route met the following requirements:
+
+   • It could start in any of the cities, 
+     visited each of the cities around the lake, 
+	 and finally ended in another city different from the starting city.
+	 
+   • The route visited each city exactly once.
+   • Every pair of consecutively visited cities in the route 
+     had a commercial agreement.
+	 
+   • Every pair of consecutively visited cities in the route 
+     was connected by a line segment.
+	 
+   • To avoid crashes between boats, the route never crossed itself.
+
+The figure shows the lake and the cities around it. 
+The lines (both thick and thin) represent commercial agreements between cities. 
+The thick lines represent a commerce route starting in city 2 and ending in city 5.
+This route never crosses itself. 
+It would not be legal, for example, to construct a route 
+that went from 2 to 6 to 5 to 1, since the route would cross itself.
+
+Cities in the lake are numbered from 1 through c moving in clockwise direction.
+
+TASK
+Write a program that, given both the count c of cities 
+and a list of the commercial agreements between them, 
+constructs a commerce route that meets the above requirements. 
+
+CONSTRAINTS
+3 ≤ c ≤ 1000 Number of cities around the lake. 
+
+
+OPTIMAL SOLUTION: 
+
+Suppose that you want the trade route to start in city x. 
+It can only progress to its neighbor city on the left or on the right, 
+because any other connection would divide the lake 
+into two regions with unreached cities on both sides, 
+making the construction of a non-crossing trade route impossible. 
+
+Similar reasoning can be applied to the following cities. 
+Every new city must be adjacent to the already connected cities. 
+In this way, it can only be chosen between the two cities 
+that are adjacent to the already connected ones. 
+
+It can also be seen that once you have a set of cities connected with a route 
+that ends in city y it really doesn't matter the order in which the cities were connected. 
+
+For example, lets say that you have a route 
+that connects cities 2,3,4 and 5 and ends in city 5. 
+It doesn't matter if the route goes 
+   (2-3-4-5), 
+   (3-2-4-5) 
+or (4-3-2-5). 
+
+For any of the previous routes the two cities 
+that can be chosen next are either 1 or 6. 
+This situation is distinctive of dynamic programming.
+
+For any pair of cities (u,v) we say that left(u,v) is true 
+if it is possible to construct a route 
+that connects every city to the left of a line drawn from u to v, 
+including u and v that ends in v. 
+
+Also we say that right(u,v) is true 
+if it is possible to construct a route 
+that connects every city to the right that ends in v. 
+
+We initialize the recursion stating that for every i, 
+left(i,i)=right(i,i)=true. 
+The recursion formulas are: 
+
+  left(u,v) = left(u,v-1) and agreement(v-1,v)
+           or right(v-1,u) and agreement(u,v) 
+  
+  right(u,v) = right(u,v+1) and agreement(v+1,v) 
+            or left(v+1,u) and agreement(u,v)
+			
+If you find a pair of cities (i,j) 
+for which (rigth(i,j) and left(i+1,j)) = true, you have a solution. 
+The route can be reconstructed easily using the same recursion. 
+
+Another solution.
+
+Pick a pair of cities (u,v) around the lake such that there is an edge (u,v). 
+Assuming this is part of the final route, this divides the circle into two disjoint parts. 
+Solve them separately. 
+In one part, find a solution that ends at u and in the other part, find a solution that ends at v. 
+
+The sub-solutions will not cross each other or cross the edge (u,v), 
+so we can combine these sub-solutions with the edge (u,v) to get a solution overall.
+
+This solution will work, in general, 
+but it becomes difficult to program because 
+at recursive steps we have to maintain the current list of cities 
+along the periphery that are being handled in the recursive call.
+
+Instead, we adopt a different approach (which is NOT the same as the earlier divide-and-conquer).
+
+Let i and j be any distinct cities along the periphery and consider the ordered pair (i,j). 
+
+We define
+
+Clockwise(i,j) : there is a valid tour among the cities in the arc i,i+1,...,j ending at j
+Anticlockwise(i,j) : there is a valid tour among the cities in the arc j,j+1,...,i ending at j
+
+Let us write an inductive definition for Clockwise(i,j). 
+Since the path ends at j, the last edge in the path is either (j-1,j) or (i,j). 
+Any other edge to j would cut through the centre of the lake and not allow a nonintersecting path among all cities.
+
+If the last edge in the path Clockwise(i,j) is (j-1,j), 
+there is an edge (j-1,j) and, inductively, a path in i,i+1,...,j-1 ending at j-1. 
+This is the same as Clockwise(i,j-1).
+
+On the other hand, 
+if the last path in Clockwise(i,j) is (i,j), 
+we need a path in (i,...,j-1) ending at i to which we add (i,j) to get the overall path. 
+This requirement can be expressed as Anticlockwise(j-1,i).
+
+Clockwise(i,j)
+
+   .i
+       .i+1
+        
+		 .i+2
+		  .
+		  .
+		  .
+		 .j-2
+       . j-1
+   .j
+   
+
+
+
+Thus, we have
+
+Clockwise(i,j) = (Clockwise(i,j-1) AND Edge(j-1,j)) OR (Anticlockwise(j-1,i) AND Edge(i,j))
+
+Symmetrically, for Anticlockwise(i,j), we either end with an edge (j+1,j) or an edge (i,j). 
+
+Similar to the above, we have
+
+Anticlockwise(i,j) = (Anticlockwise(i,j+1) AND Edge(j+1,j)) OR (Clockwise(j+1,i) AND Edge(i,j))
+
+Notice that whenever we refer to Clockwise(i,j) or Anticlockwise(i,j) in this formulation, 
+
+we are always referring to the entire segment between i and j (or j and i) along the circumference, 
+
+so there is no problem keeping track of which cities are part of the subproblem being considered.
+
+The base cases are
+
+Clockwise(j,j+1) = True if Edge(j,j+1)
+Anticlockwise(j+1,j) = True if Edge(j,j+1)
+
+Finally, we have a solution to the problem if there exists a city i such that Clockwise(i+1,i) 
+(or equivalently, Anticlockwise(i+1,i)). 
+Here, i would be one end point of the valid route.
+
+Alternatively, we could look for i and j such that Clockwise(i,j) AND Anticlockwise(i-1,j). 
+Both these paths end in j and can be combined into a nonoverlapping path for all the cities.
+
+
+
+ .a
+   .r(a)=x
+     .
+     .
+     .
+
+   .l(b)=y
+ .b
+
+p = 1
+  p1 = E[b][x] ? f(x,b,0) : 0;
+  p2 = E[b][y] ? f(a,y,1) : 0;
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

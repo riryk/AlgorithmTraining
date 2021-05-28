@@ -516,24 +516,24 @@
 					RelativePath=".\IOI\2005\rivers.txt"
 					>
 				</File>
-			</Filter>
+			</Filter>-->
 			<Filter
 				Name="2006"
 				>
 				<File
-					RelativePath=".\IOI\2006\pyramid.cpp"
+					RelativePath=".\IOI\2006\mexico.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\IOI\2006\pyramid.h"
+					RelativePath=".\IOI\2006\mexico.h"
 					>
 				</File>
 				<File
-					RelativePath=".\IOI\2006\pyramid.txt"
+					RelativePath=".\IOI\2006\mexico.txt"
 					>
 				</File>
 			</Filter>
-			<Filter
+			<!--<Filter
 				Name="2002"
 				>
 				<File
