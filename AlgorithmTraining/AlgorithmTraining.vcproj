@@ -465,10 +465,10 @@
 		<Filter
 			Name="IOI"
 			>
-			<!--<Filter
+			<Filter
 				Name="2005"
 				>
-				<File
+				<!--<File
 					RelativePath=".\IOI\2005\birthday.cpp"
 					>
 				</File>
@@ -515,8 +515,16 @@
 				<File
 					RelativePath=".\IOI\2005\rivers.txt"
 					>
+				</File>-->
+				<File
+					RelativePath=".\IOI\2005\rivers1.cpp"
+					>
 				</File>
-			</Filter>-->
+				<File
+					RelativePath=".\IOI\2005\rivers.h"
+					>
+				</File>
+			</Filter>
 			<Filter
 				Name="2006"
 				>
