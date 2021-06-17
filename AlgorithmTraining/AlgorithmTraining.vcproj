@@ -668,66 +668,22 @@
 					RelativePath=".\IOI\2003\robots.txt"
 					>
 				</File>
-			</Filter>
+			</Filter>-->
 			<Filter
 				Name="2004"
 				>
 				<File
-					RelativePath=".\IOI\2004\artemis.cpp"
+					RelativePath=".\IOI\2004\farmer1.cpp"
 					>
 				</File>
 				<File
-					RelativePath=".\IOI\2004\artemis.h"
+					RelativePath=".\IOI\2004\farmer.h"
 					>
 				</File>
-				<File
-					RelativePath=".\IOI\2004\artemis.txt"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\empodia.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\empodia.h"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\empodia.txt"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\empodia1.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\hermes.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\hermes.h"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\hermes.txt"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\phidias.cpp"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\phidias.h"
-					>
-				</File>
-				<File
-					RelativePath=".\IOI\2004\phidias.txt"
-					>
-				</File>
-			</Filter>-->
-			<Filter
+			</Filter>
+			<!--<Filter
 				Name="2009"
-				>
+				>-->
 				<!--<File
 					RelativePath=".\IOI\2009\garage.cpp"
 					>
@@ -819,7 +775,7 @@
 				<File
 					RelativePath=".\IOI\2009\salesman.txt"
 					>
-				</File>-->
+				</File>
 				<File
 					RelativePath=".\IOI\2009\raisins1.cpp"
 					>
@@ -828,7 +784,7 @@
 					RelativePath=".\IOI\2009\raisins.h"
 					>
 				</File>
-			</Filter>
+			</Filter>-->
 			<!--<Filter
 				Name="2008"
 				>
